@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="CUSTOM_SCOPE_NAME" value="Unnamed" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1d29e3a3-ef08-4564-8469-44fc24d48bfe" name="Changes" comment="TESTES FEITOS UHUUUU">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/docs/element-list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/member-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/type-search-index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vendaingressos/Controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vendaingressos/Controller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vendaingressos/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vendaingressos/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vendaingressos/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vendaingressos/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendaingressos/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendaingressos/Enum/FormaDePagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/Enum/FormaDePagamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendaingressos/abstracts/Repositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/abstracts/Repositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendaingressos/interfaces/ComId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/interfaces/ComId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendaingressos/models/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/models/Compra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendaingressos/models/Ingresso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/models/Ingresso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioCompra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioCompra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioEvento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioEvento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioIngresso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioIngresso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/CompraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CompraTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/RepositorioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/RepositorioTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="arquivos" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Marcelosgc1&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Marcelosgc1/java_pbl1.git&quot;,
+    &quot;accountId&quot;: &quot;6344931b-008a-4270-89f9-ea4f9ea92278&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/vendaingressos/Evento.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/test/RepositorioTest.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="NamedScopeManager">
+    <scope name="Unnamed" pattern="src:vendaingressos.*" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2lMI9iSGoLFhrP0f0aIVjfluhUl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.All in java_pbl1.executor": "Run",
+    "JUnit.IngressoTest.executor": "Run",
+    "JUnit.IngressoTest.testCriarIngresso.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "arquivos__loucos",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "F:/Users/marce/Documents/Programacao2_1/java_pbl1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/vendaingressos" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in java_pbl1">
+    <configuration name="All in java_pbl1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java_pbl1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IngressoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java_pbl1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="IngressoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IngressoTest.testCriarIngresso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java_pbl1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="IngressoTest" />
+      <option name="METHOD_NAME" value="testCriarIngresso" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in java_pbl1" />
+        <item itemvalue="JUnit.IngressoTest" />
+        <item itemvalue="JUnit.IngressoTest.testCriarIngresso" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d29e3a3-ef08-4564-8469-44fc24d48bfe" name="Changes" comment="" />
+      <created>1724983368586</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724983368586</updated>
+      <workItem from="1724983369789" duration="1057000" />
+      <workItem from="1724984447056" duration="8203000" />
+      <workItem from="1725017508403" duration="3493000" />
+      <workItem from="1725021427381" duration="4214000" />
+      <workItem from="1725115658049" duration="1732000" />
+      <workItem from="1725723770016" duration="437000" />
+      <workItem from="1725787805220" duration="3855000" />
+      <workItem from="1725791700162" duration="1341000" />
+      <workItem from="1725912180425" duration="2804000" />
+      <workItem from="1726070939343" duration="1070000" />
+      <workItem from="1726188830711" duration="879000" />
+      <workItem from="1726494425831" duration="3621000" />
+      <workItem from="1726507636794" duration="1018000" />
+      <workItem from="1726510734831" duration="32000" />
+      <workItem from="1726516305269" duration="5095000" />
+      <workItem from="1726541157471" duration="1571000" />
+      <workItem from="1726794290499" duration="3116000" />
+      <workItem from="1727520068421" duration="10998000" />
+      <workItem from="1727554397228" duration="2001000" />
+      <workItem from="1727612054753" duration="8812000" />
+      <workItem from="1727702345909" duration="5959000" />
+      <workItem from="1727736147419" duration="1021000" />
+      <workItem from="1728137729377" duration="20264000" />
+      <workItem from="1728226872851" duration="7238000" />
+      <workItem from="1728240004766" duration="3820000" />
+      <workItem from="1728301236701" duration="27890000" />
+      <workItem from="1728603118381" duration="607000" />
+      <workItem from="1728740886657" duration="3073000" />
+      <workItem from="1728822347288" duration="31589000" />
+      <workItem from="1728906305879" duration="9648000" />
+      <workItem from="1728924652306" duration="9466000" />
+      <workItem from="1728953098675" duration="29000" />
+      <workItem from="1729347111366" duration="8498000" />
+    </task>
+    <task id="LOCAL-00001" summary="coiasas asaasa">
+      <option name="closed" value="true" />
+      <created>1725723240522</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725723240522</updated>
+    </task>
+    <task id="LOCAL-00002" summary="utiliza metodos já existentes">
+      <option name="closed" value="true" />
+      <created>1725724176622</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725724176622</updated>
+    </task>
+    <task id="LOCAL-00003" summary=":recycle: refactor: refatora metodos para evitar repetição de código">
+      <option name="closed" value="true" />
+      <created>1725792516261</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725792516261</updated>
+    </task>
+    <task id="LOCAL-00004" summary="código terminado ebaaa">
+      <option name="closed" value="true" />
+      <created>1725915946615</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725915946615</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ultimo de todos real oficial">
+      <option name="closed" value="true" />
+      <created>1726071254475</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726071254475</updated>
+    </task>
+    <task id="LOCAL-00006" summary="agora sim usando overload">
+      <option name="closed" value="true" />
+      <created>1726189035019</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1726189035019</updated>
+    </task>
+    <task id="LOCAL-00007" summary=":books: docs: inclui javadocs">
+      <option name="closed" value="true" />
+      <created>1726497153550</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1726497153550</updated>
+    </task>
+    <task id="LOCAL-00008" summary="metodo correto eba">
+      <option name="closed" value="true" />
+      <created>1726508516136</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1726508516136</updated>
+    </task>
+    <task id="LOCAL-00009" summary="javadocs">
+      <option name="closed" value="true" />
+      <created>1726517609381</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1726517609381</updated>
+    </task>
+    <task id="LOCAL-00010" summary="salva coisa wow">
+      <option name="closed" value="true" />
+      <created>1726797801250</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1726797801250</updated>
+    </task>
+    <task id="LOCAL-00011" summary="sla cara">
+      <option name="closed" value="true" />
+      <created>1727531812838</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1727531812838</updated>
+    </task>
+    <task id="LOCAL-00012" summary="sla cara">
+      <option name="closed" value="true" />
+      <created>1727556333943</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1727556333943</updated>
+    </task>
+    <task id="LOCAL-00013" summary="xd">
+      <option name="closed" value="true" />
+      <created>1728307120678</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1728307120678</updated>
+    </task>
+    <task id="LOCAL-00014" summary="salvamento completo ebaaaa">
+      <option name="closed" value="true" />
+      <created>1728342944876</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1728342944876</updated>
+    </task>
+    <task id="LOCAL-00015" summary="asdjkgh">
+      <option name="closed" value="true" />
+      <created>1728744872707</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1728744872707</updated>
+    </task>
+    <task id="LOCAL-00016" summary="tecnicamente so falta os testes e relatorios">
+      <option name="closed" value="true" />
+      <created>1728861639476</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1728861639479</updated>
+    </task>
+    <task id="LOCAL-00017" summary="TESTES FEITOS UHUUUU">
+      <option name="closed" value="true" />
+      <created>1728941753865</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1728941753865</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="coiasas asaasa" />
+    <MESSAGE value="utiliza metodos já existentes" />
+    <MESSAGE value=":recycle: refactor: refatora metodos para evitar repetição de código" />
+    <MESSAGE value="código terminado ebaaa" />
+    <MESSAGE value="ultimo de todos real oficial" />
+    <MESSAGE value="agora sim usando overload" />
+    <MESSAGE value=":books: docs: inclui javadocs" />
+    <MESSAGE value="metodo correto eba" />
+    <MESSAGE value="javadocs" />
+    <MESSAGE value="salva coisa wow" />
+    <MESSAGE value="sla cara" />
+    <MESSAGE value="xd" />
+    <MESSAGE value="salvamento completo ebaaaa" />
+    <MESSAGE value="asdjkgh" />
+    <MESSAGE value="tecnicamente so falta os testes e relatorios" />
+    <MESSAGE value="TESTES FEITOS UHUUUU" />
+    <option name="LAST_COMMIT_MESSAGE" value="TESTES FEITOS UHUUUU" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.AssertionError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
