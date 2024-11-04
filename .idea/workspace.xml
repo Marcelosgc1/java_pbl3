@@ -8,43 +8,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d29e3a3-ef08-4564-8469-44fc24d48bfe" name="Changes" comment="TESTES FEITOS UHUUUU">
+      <change afterPath="$PROJECT_DIR$/src/vendaingressos/GUI/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/element-list" beforeDir="false" afterPath="$PROJECT_DIR$/docs/element-list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/package-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/package-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/type-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vendaingressos/Controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vendaingressos/Controller.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vendaingressos/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vendaingressos/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vendaingressos/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vendaingressos/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendaingressos/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendaingressos/Enum/FormaDePagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/Enum/FormaDePagamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendaingressos/abstracts/Repositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/abstracts/Repositorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendaingressos/interfaces/ComId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/interfaces/ComId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendaingressos/models/Compra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/models/Compra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendaingressos/models/Ingresso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/models/Ingresso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioCompra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioCompra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioEvento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioEvento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioIngresso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioIngresso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vendaingressos/repositories/RepositorioUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_pbl1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java_pbl1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/CompraTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/CompraTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/ControllerTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/ControllerTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/ControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/ControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/EventoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/EventoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/IngressoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/IngressoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/RepositorioTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/RepositorioTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/RepositorioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/RepositorioTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/UsuarioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/UsuarioTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/CompraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CompraTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/RepositorioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/RepositorioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/EventoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/EventoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/IngressoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/IngressoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UsuarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/UsuarioTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,39 +76,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.All in java_pbl1.executor": "Run",
-    "JUnit.IngressoTest.executor": "Run",
-    "JUnit.IngressoTest.testCriarIngresso.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "arquivos__loucos",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "F:/Users/marce/Documents/Programacao2_1/java_pbl1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.GUI.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.All in java_pbl1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.IngressoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.IngressoTest.testCriarIngresso.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/marcelo/Downloads/openjfx-23.0.1_linux-x64_bin-sdk/javafx-sdk-23.0.1/lib/javafx.web.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/vendaingressos" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in java_pbl1">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="vendaingressos.GUI.GUI" />
+      <module name="java_pbl1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="vendaingressos.GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.vendaingressos.problema3_gui.Main" />
+      <module name="problema3_GUI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vendaingressos.problema3_gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in java_pbl1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java_pbl1" />
       <option name="PACKAGE_NAME" value="" />
@@ -160,6 +165,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.GUI" />
         <item itemvalue="JUnit.All in java_pbl1" />
         <item itemvalue="JUnit.IngressoTest" />
         <item itemvalue="JUnit.IngressoTest.testCriarIngresso" />
@@ -169,8 +176,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
       </set>
     </attachedChunks>
   </component>
@@ -215,6 +222,7 @@
       <workItem from="1728924652306" duration="9466000" />
       <workItem from="1728953098675" duration="29000" />
       <workItem from="1729347111366" duration="8498000" />
+      <workItem from="1730738760046" duration="5248000" />
     </task>
     <task id="LOCAL-00001" summary="coiasas asaasa">
       <option name="closed" value="true" />

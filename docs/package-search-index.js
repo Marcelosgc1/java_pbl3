@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"vendaingressos"},{"l":"vendaingressos.abstracts"},{"l":"vendaingressos.Enum"},{"l":"vendaingressos.interfaces"},{"l":"vendaingressos.models"},{"l":"vendaingressos.repositories"}];updateSearchResults();
