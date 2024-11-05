@@ -4,9 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 
-public class HelloController {
+public class ControllerGUI {
 
-    // FXML fields for the UI elements
     @FXML
     private Label masterLabel;
 
@@ -28,7 +27,6 @@ public class HelloController {
     @FXML
     private MenuItem openMenuItem;
 
-    // Methods to handle actions (for example, on menu item clicks)
     @FXML
     public void handleNewAction() {
         System.out.println("New menu item clicked");
@@ -44,5 +42,4 @@ public class HelloController {
         System.out.println("Close menu item clicked");
     }
 
-    // You can add additional methods to handle other actions
 }

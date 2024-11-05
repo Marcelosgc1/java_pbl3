@@ -8,21 +8,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d29e3a3-ef08-4564-8469-44fc24d48bfe" name="Changes" comment="TESTES FEITOS UHUUUU">
-      <change afterPath="$PROJECT_DIR$/src/vendaingressos/GUI/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_pbl1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/problema3_GUI.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/Enum/FormaDePagamento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/abstracts/Repositorio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/interfaces/ComId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/models/Compra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/models/Evento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/models/Ingresso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/models/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioCompra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioEvento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioIngresso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioUsuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/CompraTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/ControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/EventoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/IngressoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/RepositorioTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/UsuarioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java_pbl1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java_pbl1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/CompraTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/CompraTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/ControllerTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/ControllerTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/ControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/ControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/EventoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/EventoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/IngressoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/IngressoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/RepositorioTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/RepositorioTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/RepositorioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/RepositorioTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/java_pbl1/UsuarioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java_pbl1/UsuarioTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/CompraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CompraTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/EventoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/EventoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/IngressoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/IngressoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/UsuarioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/UsuarioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/ControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/vendaingressos/problema3_gui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/vendaingressos/problema3_gui/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/HelloController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,37 +91,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.GUI.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.All in java_pbl1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.IngressoTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.IngressoTest.testCriarIngresso.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/marcelo/Downloads/openjfx-23.0.1_linux-x64_bin-sdk/javafx-sdk-23.0.1/lib/javafx.web.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.GUI.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.All in java_pbl1.executor": "Run",
+    "JUnit.All in problema3_GUI.executor": "Run",
+    "JUnit.CompraTest.executor": "Run",
+    "JUnit.IngressoTest.executor": "Run",
+    "JUnit.IngressoTest.testCriarIngresso.executor": "Run",
+    "JUnit.RepositorioTest.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/marcelo/Documentos/PBLJAVA/java_pbl3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/vendaingressos" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui" />
+      <recent name="$PROJECT_DIR$/src/vendaingressos" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -136,29 +156,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in java_pbl1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java_pbl1" />
+    <configuration name="All in problema3_GUI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="problema3_GUI" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IngressoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java_pbl1" />
+    <configuration name="CompraTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="problema3_GUI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IngressoTest" />
+      <option name="MAIN_CLASS_NAME" value="CompraTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IngressoTest.testCriarIngresso" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java_pbl1" />
+    <configuration name="RepositorioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="problema3_GUI" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IngressoTest" />
-      <option name="METHOD_NAME" value="testCriarIngresso" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="RepositorioTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,10 +185,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.All in problema3_GUI" />
+        <item itemvalue="JUnit.RepositorioTest" />
+        <item itemvalue="JUnit.CompraTest" />
         <item itemvalue="Application.GUI" />
-        <item itemvalue="JUnit.All in java_pbl1" />
-        <item itemvalue="JUnit.IngressoTest" />
-        <item itemvalue="JUnit.IngressoTest.testCriarIngresso" />
       </list>
     </recent_temporary>
   </component>
@@ -223,6 +242,7 @@
       <workItem from="1728953098675" duration="29000" />
       <workItem from="1729347111366" duration="8498000" />
       <workItem from="1730738760046" duration="5248000" />
+      <workItem from="1730803048551" duration="3759000" />
     </task>
     <task id="LOCAL-00001" summary="coiasas asaasa">
       <option name="closed" value="true" />
