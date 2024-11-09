@@ -14,6 +14,7 @@ package com.vendaingressos.problema3_gui.abstracts;
 import com.google.gson.Gson;
 import com.vendaingressos.problema3_gui.interfaces.ComId;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -39,7 +40,7 @@ public abstract class Repositorio<Tipo extends ComId> {
      * @return retorna caminho do arquivo com informações do objeto
      */
     public String gerarCaminho(String path, String id){
-        return path + "\\" + classe.getSimpleName() + "\\" + id + ".json";
+        return path + File.separator + classe.getSimpleName() + File.separator + id + ".json";
     }
 
     /**
@@ -49,7 +50,7 @@ public abstract class Repositorio<Tipo extends ComId> {
      * @return caminho da pasta com as infos do objeto
      */
     public String gerarCaminhoPasta(String path, String id){
-        return path + "\\" + classe.getSimpleName();
+        return path + File.separator + classe.getSimpleName();
     }
 
     /**

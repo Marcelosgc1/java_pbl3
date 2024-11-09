@@ -9,9 +9,11 @@
  do código, e estou ciente que estes trechos não serão considerados para fins de avaliação.
  *******************************************************************************************/
 
-package com.vendaingressos.problema3_gui;
+package com.vendaingressos.problema3_gui.controllers;
 
 import com.vendaingressos.problema3_gui.Enum.FormaDePagamento;
+import com.vendaingressos.problema3_gui.exceptions.UserNotFoundException;
+import com.vendaingressos.problema3_gui.exceptions.WrongPasswordException;
 import com.vendaingressos.problema3_gui.models.Compra;
 import com.vendaingressos.problema3_gui.models.Evento;
 import com.vendaingressos.problema3_gui.models.Ingresso;
@@ -75,6 +77,19 @@ public class Controller {
 
 
     //outros metodos
+
+    public Usuario loginUsuario(String login, String senha) throws Exception {
+        Usuario usuario = ru.carregarUsuario(path, login);
+        if (usuario == null) {
+            throw new UserNotFoundException("Usuario não encontrado");
+        }
+        if (usuario.login(login, senha)){
+            return usuario;
+        }
+        throw new WrongPasswordException("Senha incorreta");
+
+    }
+
 
     /**
      * Cria um usuário e o põe no HashMap que guarda todos os usuários

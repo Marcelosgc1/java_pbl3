@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterEach;
-import com.vendaingressos.problema3_gui.Controller;
+import com.vendaingressos.problema3_gui.controllers.Controller;
 import com.vendaingressos.problema3_gui.Enum.FormaDePagamento;
 import com.vendaingressos.problema3_gui.models.Evento;
 import com.vendaingressos.problema3_gui.models.Ingresso;
@@ -30,7 +30,7 @@ import com.vendaingressos.problema3_gui.models.Usuario;
 public class ControllerTest {
 
     @Test
-    public void testCadastrarEventoPorAdmin() throws IOException {
+    public void testCadastrarEventoPorAdmin() throws Exception {
         Controller controller = new Controller();
         Usuario admin = controller.cadastrarUsuario("admin", "senha123", "Admin User", "00000000000", "admin@example.com", true);
 
@@ -47,7 +47,7 @@ public class ControllerTest {
     }
 
     @Test
-    public void testCadastrarEventoPorUsuarioComum() throws IOException {
+    public void testCadastrarEventoPorUsuarioComum() throws Exception {
         Controller controller = new Controller();
         Usuario usuario = controller.cadastrarUsuario("johndoe", "senha123", "John Doe", "12345678901", "john.doe@example.com", false);
 
@@ -63,7 +63,7 @@ public class ControllerTest {
     }
 
     @Test
-    public void testComprarIngresso() throws IOException {
+    public void testComprarIngresso() throws Exception {
         Controller controller = new Controller();
         Usuario usuario = controller.cadastrarUsuario("johndoe", "senha123", "John Doe", "12345678901", "john.doe@example.com", false);
 

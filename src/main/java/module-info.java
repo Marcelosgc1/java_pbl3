@@ -13,4 +13,6 @@ module com.vendaingressos.problema3_gui {
     exports com.vendaingressos.problema3_gui.models;
     exports com.vendaingressos.problema3_gui.Enum;
     exports com.vendaingressos.problema3_gui.abstracts;
+    exports com.vendaingressos.problema3_gui.controllers;
+    opens com.vendaingressos.problema3_gui.controllers to javafx.fxml;
 }

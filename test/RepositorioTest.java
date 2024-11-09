@@ -22,6 +22,7 @@ import com.vendaingressos.problema3_gui.repositories.RepositorioUsuario;
 import org.junit.jupiter.api.Test;
 
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
@@ -65,10 +66,10 @@ public class RepositorioTest {
         pathPrincipal = pathPrincipal + "repositoryTests";
 
         //Criando pastas auxiliares
-        pastaEventos = pathPrincipal + "/events";
-        pastaUsuario = pathPrincipal + "/user";
-        pastaCompra = pathPrincipal + "/purchases";
-        pastaIngresso = pathPrincipal + "/ticket";
+        pastaEventos = pathPrincipal + File.separator + "events";
+        pastaUsuario = pathPrincipal+ File.separator  + "user";
+        pastaCompra = pathPrincipal+ File.separator  + "purchases";
+        pastaIngresso = pathPrincipal+ File.separator  + "ticket";
 
 
     }

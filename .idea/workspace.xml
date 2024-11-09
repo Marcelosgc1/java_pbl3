@@ -8,36 +8,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d29e3a3-ef08-4564-8469-44fc24d48bfe" name="Changes" comment="TESTES FEITOS UHUUUU">
-      <change afterPath="$PROJECT_DIR$/java_pbl1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/problema3_GUI.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/Enum/FormaDePagamento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/abstracts/Repositorio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/interfaces/ComId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/models/Compra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/models/Evento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/models/Ingresso.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/models/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioCompra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioEvento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioIngresso.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioUsuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/CompraTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/ControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/EventoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/IngressoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/RepositorioTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/UsuarioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/Usuarios/aaaa/Usuario.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/Usuarios/aaaaaaaaa/Usuario.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/setUsuarios.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/controllers/ControllerLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/controllers/ControllerMainPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/exceptions/AlreadyExistingUserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/exceptions/EmptyFieldException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/exceptions/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/exceptions/WrongPasswordException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/ControllerGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/ControllerGUI.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/abstracts/Repositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/abstracts/Repositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioCompra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioCompra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioIngresso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioIngresso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vendaingressos/problema3_gui/repositories/RepositorioUsuario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/vendaingressos/problema3_gui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/vendaingressos/problema3_gui/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/HelloController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/ControllerGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/ControllerGUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/abstracts/Repositorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/abstracts/Repositorio.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/repositories/RepositorioCompra.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/repositories/RepositorioCompra.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/repositories/RepositorioIngresso.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/repositories/RepositorioIngresso.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/repositories/RepositorioUsuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/vendaingressos/problema3_gui/repositories/RepositorioUsuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/resources/com/vendaingressos/problema3_gui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/resources/com/vendaingressos/problema3_gui/hello-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RepositorioTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RepositorioTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RepositorioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RepositorioTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/RepositorioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/RepositorioTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,37 +94,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.GUI.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.All in java_pbl1.executor": "Run",
-    "JUnit.All in problema3_GUI.executor": "Run",
-    "JUnit.CompraTest.executor": "Run",
-    "JUnit.IngressoTest.executor": "Run",
-    "JUnit.IngressoTest.testCriarIngresso.executor": "Run",
-    "JUnit.RepositorioTest.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/marcelo/Documentos/PBLJAVA/java_pbl3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.GUI.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.All in java_pbl1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in problema3_GUI.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CompraTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.IngressoTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.IngressoTest.testCriarIngresso.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RepositorioTest.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;new__files&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/marcelo/Documentos/PBLJAVA/java_pbl3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -148,7 +151,7 @@
       <module name="problema3_GUI" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vendaingressos.problema3_gui.*" />
+          <option name="PATTERN" value="com.vendaingressos.problema3_gui.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -243,6 +246,12 @@
       <workItem from="1729347111366" duration="8498000" />
       <workItem from="1730738760046" duration="5248000" />
       <workItem from="1730803048551" duration="3759000" />
+      <workItem from="1730806843977" duration="1021000" />
+      <workItem from="1730822176824" duration="3288000" />
+      <workItem from="1730909058853" duration="1749000" />
+      <workItem from="1731112335316" duration="73000" />
+      <workItem from="1731151726349" duration="13983000" />
+      <workItem from="1731171718311" duration="10223000" />
     </task>
     <task id="LOCAL-00001" summary="coiasas asaasa">
       <option name="closed" value="true" />
