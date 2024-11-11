@@ -16,6 +16,8 @@ import static com.vendaingressos.problema3_gui.Main.controller;
 
 public class ControllerLogin {
 
+    public static Usuario usuarioLogado;
+
     @FXML
     private TextField login;
     @FXML
@@ -87,9 +89,9 @@ public class ControllerLogin {
             if (userPassword.isEmpty() || userLogin.isEmpty()) {
                 throw new EmptyFieldException("Preencha os campos de login e senha!");
             }
-            Usuario usuarioLogado = controller.loginUsuario(userLogin, userPassword);
+            usuarioLogado = controller.loginUsuario(userLogin, userPassword);
             System.out.println(userLogin + " loggado com sucesso!");
-            mudarTelaPrincipal(usuarioLogado);
+            mudarTelaPrincipal();
         }
         catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR, e.getMessage(), ButtonType.OK);
@@ -100,7 +102,7 @@ public class ControllerLogin {
     }
 
     @FXML
-    public void mudarTelaPrincipal(Usuario usuarioLogado) throws IOException {
+    public void mudarTelaPrincipal() throws IOException {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/vendaingressos/problema3_gui/mainScreen.fxml"));
             Scene mainScene = new Scene(loader.load());
