@@ -79,7 +79,7 @@
                      </font>
                   </Label>
                   <Button layoutX="58.0" layoutY="395.0" mnemonicParsing="false" onAction="#cadastraUsuario" text="CRIAR CONTA" />
-                  <PasswordField fx:id="senhaConfirm" accessibleRole="TEXT_FIELD" layoutX="26.0" layoutY="333.0" promptText="SENHA NOVAMENTE" />
+                  <PasswordField fx:id="senhaConfirm" accessibleRole="TEXT_FIELD" layoutX="26.0" layoutY="333.0" promptText="CONFIRMAR SENHA" />
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">

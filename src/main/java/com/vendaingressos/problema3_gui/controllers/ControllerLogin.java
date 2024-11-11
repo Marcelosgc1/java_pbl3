@@ -41,7 +41,7 @@ public class ControllerLogin {
     private Label username;
 
     @FXML
-    public void cadastraUsuario() throws IOException {
+    public void cadastraUsuario(){
         try {
             String userLogin = login.getText();
             String userPassword = senha.getText();
@@ -62,7 +62,17 @@ public class ControllerLogin {
             if(a == null) {
                 throw new AlreadyExistingUserException("Há usuário com este login já cadastrado!");
             }
-            System.out.println("Usuario cadastrado com sucesso!");
+
+            login.clear();
+            senha.clear();
+            nome.clear();
+            cpf.clear();
+            email.clear();
+            senhaConfirm.clear();
+
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Usuario Cadastrado com sucesso!", ButtonType.OK);
+            alert.showAndWait();
+
         }catch (Exception e){
             Alert alert = new Alert(Alert.AlertType.ERROR, e.getMessage(), ButtonType.OK);
             alert.showAndWait();
@@ -70,7 +80,7 @@ public class ControllerLogin {
     }
 
     @FXML
-    public void loginUsuario() throws Exception {
+    public void loginUsuario() {
         try {
             String userLogin = logLogin.getText();
             String userPassword = logSenha.getText();
@@ -96,7 +106,7 @@ public class ControllerLogin {
             Scene mainScene = new Scene(loader.load());
 
             ControllerMainPage newController = loader.getController();
-            newController.setUsuarioLogado(usuarioLogado);
+            newController.initialize(usuarioLogado);
 
             Stage stage = (Stage) logSenha.getScene().getWindow();
             stage.setScene(mainScene);

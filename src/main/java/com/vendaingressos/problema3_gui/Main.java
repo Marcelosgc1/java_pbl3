@@ -17,7 +17,6 @@ public class Main extends Application {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("loginScreen.fxml"));
         VBox root = loader.load();
-        ControllerLogin mc = loader.getController();
 
         Scene scene = new Scene(root, 900, 600);
         primaryStage.setTitle("Sistema de Venda de Ingressos");
