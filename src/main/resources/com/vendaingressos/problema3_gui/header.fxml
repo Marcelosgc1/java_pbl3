@@ -10,7 +10,7 @@
     <children>
         <ToolBar HBox.hgrow="ALWAYS">
             <items>
-                <Button mnemonicParsing="false" text="Button" />
+                <Button fx:id="backButton" mnemonicParsing="false" onAction="#voltar" text="Button" />
             </items>
         </ToolBar>
         <ToolBar>

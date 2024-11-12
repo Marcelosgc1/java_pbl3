@@ -1,5 +1,6 @@
 package com.vendaingressos.problema3_gui.controllers;
 
+import com.vendaingressos.problema3_gui.Enum.Pagina;
 import com.vendaingressos.problema3_gui.exceptions.AlreadyExistingUserException;
 import com.vendaingressos.problema3_gui.exceptions.EmptyFieldException;
 import com.vendaingressos.problema3_gui.exceptions.WrongPasswordException;
@@ -16,7 +17,6 @@ import static com.vendaingressos.problema3_gui.Main.controller;
 
 public class ControllerLogin {
 
-    public static Usuario usuarioLogado;
 
     @FXML
     private TextField login;
@@ -89,7 +89,7 @@ public class ControllerLogin {
             if (userPassword.isEmpty() || userLogin.isEmpty()) {
                 throw new EmptyFieldException("Preencha os campos de login e senha!");
             }
-            usuarioLogado = controller.loginUsuario(userLogin, userPassword);
+            ControllerGUI.usuarioLogado = controller.loginUsuario(userLogin, userPassword);
             System.out.println(userLogin + " loggado com sucesso!");
             mudarTelaPrincipal();
         }
@@ -103,19 +103,11 @@ public class ControllerLogin {
 
     @FXML
     public void mudarTelaPrincipal() throws IOException {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/vendaingressos/problema3_gui/mainScreen.fxml"));
-            Scene mainScene = new Scene(loader.load());
-
-            ControllerMainPage newController = loader.getController();
-            newController.initialize(usuarioLogado);
-
-            Stage stage = (Stage) logSenha.getScene().getWindow();
-            stage.setScene(mainScene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Pagina proximaPagina = Pagina.PERFIL;
+        ControllerGUI.mudarPagina(
+                proximaPagina,
+                (Stage) logSenha.getScene().getWindow()
+        );
     }
 
 

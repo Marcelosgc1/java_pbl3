@@ -1,7 +1,8 @@
 package com.vendaingressos.problema3_gui;
 
+import com.vendaingressos.problema3_gui.Enum.Pagina;
 import com.vendaingressos.problema3_gui.controllers.Controller;
-import com.vendaingressos.problema3_gui.controllers.ControllerLogin;
+import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,7 +15,7 @@ public class Main extends Application {
     public static Controller controller = new Controller();
     @Override
     public void start(Stage primaryStage) throws Exception {
-
+        ControllerGUI.pageStack.add(Pagina.LOGIN);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("loginScreen.fxml"));
         VBox root = loader.load();
 
