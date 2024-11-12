@@ -144,6 +144,11 @@ public class Evento implements ComId {
     }
 
     @Override
+    public String toString() {
+        return this.nome + " - " + this.descricao;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

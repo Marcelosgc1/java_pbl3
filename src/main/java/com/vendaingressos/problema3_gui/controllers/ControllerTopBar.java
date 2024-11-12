@@ -32,9 +32,8 @@ public class ControllerTopBar {
 
     public void voltarParaLogin() throws IOException {
         ControllerGUI.pageStack.clear();
-        ControllerGUI.pageStack.add(Pagina.LOGIN);
         ControllerGUI.mudarPagina(
-                Pagina.LOGIN.path,
+                Pagina.LOGIN,
                 (Stage) perfil.getScene().getWindow()
         );
     }
@@ -46,17 +45,17 @@ public class ControllerTopBar {
             return;
         }
         ControllerGUI.mudarPagina(
-                Pagina.PERFIL.path,
+                Pagina.PERFIL,
                 (Stage) perfil.getScene().getWindow()
         );
     }
 
     public void voltar() throws IOException {
         ControllerGUI.pageStack.pop();
-        Pagina lastPage = ControllerGUI.pageStack.peek();
+        Pagina lastPage = ControllerGUI.pageStack.pop();
 
         ControllerGUI.mudarPagina(
-                lastPage == null ? Pagina.LOGIN.path : lastPage.path,
+                lastPage == null ? Pagina.LOGIN : lastPage,
                 (Stage) perfil.getScene().getWindow()
         );
     }
