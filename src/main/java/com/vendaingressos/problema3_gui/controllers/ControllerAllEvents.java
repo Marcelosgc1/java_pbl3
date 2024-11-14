@@ -4,9 +4,12 @@ import com.vendaingressos.problema3_gui.models.Evento;
 import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseButton;
+import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 import java.util.Date;
@@ -32,5 +35,14 @@ public class ControllerAllEvents {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.showAndWait();
         }
+    }
+
+    @FXML
+    private void aaa(){
+        todosEventos.setOnMouseClicked(event -> {
+            if (event.getClickCount() == 2) {
+                System.out.println("aaa");
+            }
+        });
     }
 }

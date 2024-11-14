@@ -35,7 +35,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         ControllerGUI.pageStack.add(Pagina.LOGIN);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("loginScreen.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(Pagina.LOGIN.path));
         VBox root = loader.load();
 
         Scene scene = new Scene(root, 900, 600);
