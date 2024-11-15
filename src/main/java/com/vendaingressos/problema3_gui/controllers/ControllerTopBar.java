@@ -3,6 +3,7 @@ package com.vendaingressos.problema3_gui.controllers;
 import com.vendaingressos.problema3_gui.Enum.Pagina;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -11,6 +12,8 @@ import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+
+import static com.vendaingressos.problema3_gui.controllers.ControllerGUI.pageStack;
 
 public class ControllerTopBar {
     @FXML
@@ -31,7 +34,7 @@ public class ControllerTopBar {
     }
 
     public void voltarParaLogin() throws IOException {
-        ControllerGUI.pageStack.clear();
+        pageStack.clear();
         ControllerGUI.mudarPagina(
                 Pagina.LOGIN,
                 (Stage) perfil.getScene().getWindow()
@@ -39,7 +42,7 @@ public class ControllerTopBar {
     }
 
     public void irParaPerfil() throws IOException {
-        if (ControllerGUI.pageStack.peek().equals(Pagina.PERFIL)) {
+        if (pageStack.peek().equals(pageStack.get(1))) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "Você já está na página de perfil!");
             alert.showAndWait();
             return;
@@ -51,14 +54,16 @@ public class ControllerTopBar {
     }
 
     public void voltar() throws IOException {
-        ControllerGUI.pageStack.pop();
-        Pagina lastPage = ControllerGUI.pageStack.pop();
+        pageStack.pop();
+        if (!pageStack.isEmpty()) {
+            ControllerGUI.mudarPagina(pageStack.pop(), (Stage) perfil.getScene().getWindow());
+            return;
+        }
+        ControllerGUI.mudarPagina(Pagina.LOGIN, (Stage) perfil.getScene().getWindow());
 
-        ControllerGUI.mudarPagina(
-                lastPage == null ? Pagina.LOGIN : lastPage,
-                (Stage) perfil.getScene().getWindow()
-        );
     }
+
+
 
 
 

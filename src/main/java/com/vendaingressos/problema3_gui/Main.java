@@ -34,18 +34,19 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        ControllerGUI.pageStack.add(Pagina.LOGIN);
         FXMLLoader loader = new FXMLLoader(getClass().getResource(Pagina.LOGIN.path));
         VBox root = loader.load();
-
         Scene scene = new Scene(root, 900, 600);
+
+        ControllerGUI.pageStack.push(scene);
+
         primaryStage.setTitle("Sistema de Venda de Ingressos");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
     public static void main(String[] args) throws Exception {
-        initEventos();
+//        initEventos();
         launch(args);
     }
 }

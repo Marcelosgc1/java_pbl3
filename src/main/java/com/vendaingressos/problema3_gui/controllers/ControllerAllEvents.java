@@ -10,6 +10,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Date;
@@ -41,7 +42,15 @@ public class ControllerAllEvents {
     private void aaa(){
         todosEventos.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
-                System.out.println("aaa");
+                Evento eventoSelecionado = todosEventos.getSelectionModel().getSelectedItem();
+                try {
+                    ControllerGUI.mudarPagina(
+                            (Stage) todosEventos.getScene().getWindow(),
+                            eventoSelecionado
+                    );
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
     }
