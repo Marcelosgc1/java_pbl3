@@ -55,7 +55,7 @@ public class ControllerAllEvents {
     }
 
     private String formatarTexto(Evento evento) {
-        return evento.getNome() + " - " + evento.getData() + "\n" + evento.getDescricao();
+        return evento.getNome() + " - " + evento.getData();
     }
 
     @FXML
