@@ -1,16 +1,13 @@
 package com.vendaingressos.problema3_gui.controllers;
 
-import com.vendaingressos.problema3_gui.Enum.Pagina;
+import com.vendaingressos.problema3_gui.Enum.Page;
+import com.vendaingressos.problema3_gui.models.Pagina;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class ControllerTopBar {
     @FXML
@@ -30,34 +27,36 @@ public class ControllerTopBar {
         backButton.setText("Voltar");
     }
 
-    public void voltarParaLogin() throws IOException {
+    public void voltarParaLogin() throws Exception {
         ControllerGUI.pageStack.clear();
         ControllerGUI.mudarPagina(
-                Pagina.LOGIN,
+                Page.LOGIN,
                 (Stage) perfil.getScene().getWindow()
         );
     }
 
-    public void irParaPerfil() throws IOException {
-        if (ControllerGUI.pageStack.peek().equals(Pagina.PERFIL)) {
+    public void irParaPerfil() throws Exception {
+        if (ControllerGUI.pageStack.peek().getPagina().equals(Page.PERFIL)) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION, "Você já está na página de perfil!");
             alert.showAndWait();
             return;
         }
         ControllerGUI.mudarPagina(
-                Pagina.PERFIL,
+                Page.PERFIL,
                 (Stage) perfil.getScene().getWindow()
         );
     }
 
-    public void voltar() throws IOException {
+    public void voltar() throws Exception {
         ControllerGUI.pageStack.pop();
-        Pagina lastPage = ControllerGUI.pageStack.pop();
+        Pagina<?> lastPage = ControllerGUI.pageStack.pop();
+        if (lastPage != null) {
+            ControllerGUI.mudarPagina(lastPage, (Stage) perfil.getScene().getWindow());
+            return;
+        }
+        ControllerGUI.mudarPagina(Page.LOGIN, (Stage) perfil.getScene().getWindow());
 
-        ControllerGUI.mudarPagina(
-                lastPage == null ? Pagina.LOGIN : lastPage,
-                (Stage) perfil.getScene().getWindow()
-        );
+
     }
 
 

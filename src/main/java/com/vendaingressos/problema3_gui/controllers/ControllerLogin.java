@@ -1,13 +1,11 @@
 package com.vendaingressos.problema3_gui.controllers;
 
-import com.vendaingressos.problema3_gui.Enum.Pagina;
+import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.exceptions.AlreadyExistingUserException;
 import com.vendaingressos.problema3_gui.exceptions.EmptyFieldException;
 import com.vendaingressos.problema3_gui.exceptions.WrongPasswordException;
 import com.vendaingressos.problema3_gui.models.Usuario;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
@@ -102,10 +100,9 @@ public class ControllerLogin {
     }
 
     @FXML
-    public void mudarTelaPrincipal() throws IOException {
-        Pagina proximaPagina = Pagina.PERFIL;
+    public void mudarTelaPrincipal() throws Exception {
         ControllerGUI.mudarPagina(
-                proximaPagina,
+                Page.PERFIL,
                 (Stage) logSenha.getScene().getWindow()
         );
     }

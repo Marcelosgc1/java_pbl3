@@ -1,7 +1,6 @@
 package com.vendaingressos.problema3_gui.controllers;
 
-import com.vendaingressos.problema3_gui.Enum.Pagina;
-import com.vendaingressos.problema3_gui.models.Usuario;
+import com.vendaingressos.problema3_gui.Enum.Page;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -22,9 +21,9 @@ public class ControllerMainPage {
         username.setText(usuarioLogado.getNome());
     }
 
-    public void verTodosEventos() throws IOException {
+    public void verTodosEventos() throws Exception {
         ControllerGUI.mudarPagina(
-            Pagina.TODOS_EVENTOS,
+            Page.TODOS_EVENTOS,
             (Stage) verEventos.getScene().getWindow()
         );
     }
