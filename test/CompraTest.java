@@ -24,23 +24,21 @@ public class CompraTest {
     public void testCriarCompra() {
         Calendar calendar = Calendar.getInstance();
         calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
 
-        Compra c = new Compra("john.doe@example.com", dataAtual, "johnDoe", List.of("id1", "id2"), 20.0, FormaDePagamento.PIX);
-        assertEquals(c.getData(), dataAtual);
-        assertEquals(c.getValorTotal(), 20.0, 0.001);
-        assertEquals(c.getUsuario(), "johnDoe");
-        assertEquals(c.getEmail(), "john.doe@example.com");
-        assertEquals(c.getIdsIngressos().size(), 2);
+        Compra c = new Compra("john.doe@example.com", calendar, "johnDoe", List.of("id1", "id2"), 20.0, FormaDePagamento.PIX);
+        assertEquals(c.getData(), calendar);
+        assertEquals(20.0, c.getValorTotal(), 0.001);
+        assertEquals("johnDoe", c.getUsuario());
+        assertEquals("john.doe@example.com", c.getEmail());
+        assertEquals(2, c.getIdsIngressos().size());
     }
 
     @Test
     public void testReciboVenda() {
         Calendar calendar = Calendar.getInstance();
         calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
 
-        Compra c = new Compra("john.doe@example.com",dataAtual, "johnDoe", List.of("id1", "id2"), 20.0, FormaDePagamento.PIX);
+        Compra c = new Compra("john.doe@example.com",calendar, "johnDoe", List.of("id1", "id2"), 20.0, FormaDePagamento.PIX);
 
         assertTrue(c.gerarRecibo().contains("Agradecemos"));
     }
@@ -50,7 +48,7 @@ public class CompraTest {
         calendar.set(2024, Calendar.SEPTEMBER, 10);
         Date dataAtual = calendar.getTime();
 
-        Compra c = new Compra("john.doe@example.com",dataAtual, "johnDoe", List.of("id1", "id2"), -20.0);
+        Compra c = new Compra("john.doe@example.com",calendar, "johnDoe", List.of("id1", "id2"), -20.0);
 
         assertFalse(c.gerarRecibo().contains("Agradecemos"));
     }
@@ -59,9 +57,8 @@ public class CompraTest {
     public void testReciboReembolso() {
         Calendar calendar = Calendar.getInstance();
         calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
 
-        Compra c = new Compra("john.doe@example.com",dataAtual, "johnDoe", List.of("id1", "id2"), -20.0);
+        Compra c = new Compra("john.doe@example.com",calendar, "johnDoe", List.of("id1", "id2"), -20.0);
 
         assertTrue(c.gerarRecibo().contains("Cancelamento"));
     }
@@ -69,9 +66,8 @@ public class CompraTest {
     public void testReciboNaoReembolso() {
         Calendar calendar = Calendar.getInstance();
         calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
 
-        Compra c = new Compra("john.doe@example.com",dataAtual, "johnDoe", List.of("id1", "id2"), 20.0, FormaDePagamento.PIX);
+        Compra c = new Compra("john.doe@example.com",calendar, "johnDoe", List.of("id1", "id2"), 20.0, FormaDePagamento.PIX);
 
         assertFalse(c.gerarRecibo().contains("Cancelamento"));
     }

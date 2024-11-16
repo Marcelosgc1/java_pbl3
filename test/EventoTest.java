@@ -20,9 +20,9 @@ public class EventoTest {
 
     @Test
     public void testCriarEvento() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
+
 
         Evento evento = new Evento("Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
 
@@ -34,9 +34,8 @@ public class EventoTest {
 
     @Test
     public void testAdicionarAssento() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
 
         Evento evento = new Evento("Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
         evento.adicionarAssento(20);
@@ -47,9 +46,8 @@ public class EventoTest {
 
     @Test
     public void testRemoverAssento() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
 
         Evento evento = new Evento("Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
         evento.adicionarAssento(20);
@@ -60,9 +58,8 @@ public class EventoTest {
 
     @Test
     public void testAdicionarAssentoNegativo() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
 
         Evento evento = new Evento("Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
         evento.adicionarAssento(-20);
@@ -72,9 +69,8 @@ public class EventoTest {
 
     @Test
     public void testRemoverAssentoImpossivel() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
 
         Evento evento = new Evento("Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
 
@@ -87,12 +83,12 @@ public class EventoTest {
 
     @Test
     public void testEventoAtivo() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
 
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
+        Calendar dataAtual = Calendar.getInstance();
+        dataAtual.set(2024, Calendar.SEPTEMBER, 10);
+
 
         Evento evento = new Evento("Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
 
@@ -101,12 +97,11 @@ public class EventoTest {
 
     @Test
     public void testEventoInativo() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2023, Calendar.SEPTEMBER, 10);
-        Date dataPassado = calendar.getTime();
+        Calendar dataPassado = Calendar.getInstance();
+        dataPassado.set(2023, Calendar.SEPTEMBER, 10);
 
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
+        Calendar dataAtual = Calendar.getInstance();
+        dataAtual.set(2024, Calendar.SEPTEMBER, 10);
 
         Evento evento = new Evento("Show de Rock", "Banda XYZ", dataPassado, 100, 100.0);
 

@@ -18,7 +18,7 @@ import java.util.*;
 
 public class Compra implements ComId {
     private String email;
-    private Date data;
+    private Calendar data;
     private List<String> idsIngressos;
     private String usuario;
     private Double valorTotal;
@@ -27,7 +27,7 @@ public class Compra implements ComId {
 
 
 
-    public Compra(String email, Date data, String usuario, List<String> idsIngressos, Double valorTotal, FormaDePagamento pagamento) {
+    public Compra(String email, Calendar data, String usuario, List<String> idsIngressos, Double valorTotal, FormaDePagamento pagamento) {
         this.email = email;
         this.data = data;
         this.usuario = usuario;
@@ -37,7 +37,7 @@ public class Compra implements ComId {
         this.id = UUID.randomUUID();
     }
 
-    public Compra(String email, Date data, String usuario, List<String> idsIngressos, Double valorTotal) {
+    public Compra(String email, Calendar data, String usuario, List<String> idsIngressos, Double valorTotal) {
         this.email = email;
         this.data = data;
         this.usuario = usuario;
@@ -51,7 +51,7 @@ public class Compra implements ComId {
         return email;
     }
 
-    public Date getData() {
+    public Calendar getData() {
         return data;
     }
 

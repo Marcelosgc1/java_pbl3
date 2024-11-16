@@ -36,14 +36,13 @@ public class ControllerTest {
 
         Calendar calendar = Calendar.getInstance();
         calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
 
-        Evento evento = controller.cadastrarEvento(admin,"Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
+        Evento evento = controller.cadastrarEvento(admin,"Show de Rock", "Banda XYZ", calendar, 100, 100.0);
 
         assertNotNull(evento);
         assertEquals("Show de Rock", evento.getNome());
         assertEquals("Banda XYZ", evento.getDescricao());
-        assertEquals(dataFuturo, evento.getData());
+        assertEquals(calendar, evento.getData());
     }
 
     @Test
@@ -53,10 +52,9 @@ public class ControllerTest {
 
         Calendar calendar = Calendar.getInstance();
         calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
 
         Exception exception = assertThrows(SecurityException.class, () -> {
-            controller.cadastrarEvento(usuario, "Peça de Teatro", "Grupo ABC", dataFuturo, 100, 100.0);
+            controller.cadastrarEvento(usuario, "Peça de Teatro", "Grupo ABC", calendar, 100, 100.0);
         });
 
         assertEquals("Somente administradores podem cadastrar eventos.", exception.getMessage());
@@ -67,12 +65,9 @@ public class ControllerTest {
         Controller controller = new Controller();
         Usuario usuario = controller.cadastrarUsuario("johndoe", "senha123", "John Doe", "12345678901", "john.doe@example.com", false);
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
 
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
 
         Usuario admin = controller.cadastrarUsuario("admin", "senha123", "Admin User", "00000000000", "admin@example.com", true);
         Evento evento = controller.cadastrarEvento(admin, "Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
@@ -91,12 +86,11 @@ public class ControllerTest {
         Controller controller = new Controller();
         Usuario usuario = new Usuario("johndoe", "senha123", "John Doe", "12345678901", "john.doe@example.com", false);
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
 
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
+        Calendar dataAtual = Calendar.getInstance();
+        dataAtual.set(2024, Calendar.SEPTEMBER, 10);
 
         Usuario admin = controller.cadastrarUsuario("admin", "senha123", "Admin User", "00000000000", "admin@example.com", true);
         Evento evento = controller.cadastrarEvento(admin, "Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
@@ -115,17 +109,14 @@ public class ControllerTest {
         Controller controller = new Controller();
         Usuario admin = controller.cadastrarUsuario("admin", "senha123", "Admin User", "00000000000", "admin@example.com", true);
 
-        Calendar calendar1 = Calendar.getInstance();
-        calendar1.set(2024, Calendar.SEPTEMBER, 10);
-        Date data1 = calendar1.getTime();
+        Calendar data1 = Calendar.getInstance();
+        data1.set(2024, Calendar.SEPTEMBER, 10);
 
-        Calendar calendar2 = Calendar.getInstance();
-        calendar2.set(2024, Calendar.SEPTEMBER, 15);
-        Date data2 = calendar2.getTime();
+        Calendar data2 = Calendar.getInstance();
+        data2.set(2024, Calendar.SEPTEMBER, 15);
 
-        Calendar calendar3 = Calendar.getInstance();
-        calendar3.set(2024, Calendar.SEPTEMBER, 1);
-        Date data3 = calendar3.getTime();
+        Calendar data3 = Calendar.getInstance();
+        data3.set(2024, Calendar.SEPTEMBER, 1);
 
         controller.cadastrarEvento(admin, "Show de Rock", "Banda XYZ", data1, 1000, 1.0);
         controller.cadastrarEvento(admin, "Peça de Teatro", "Grupo ABC", data2, 2, 2.0);
@@ -140,12 +131,9 @@ public class ControllerTest {
         Controller controller = new Controller();
         Usuario usuario = new Usuario("johndoe", "senha123", "John Doe", "12345678901", "john.doe@example.com", false);
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
 
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataPresente = calendar.getTime();
 
 
         Usuario admin = controller.cadastrarUsuario("admin", "senha123", "Admin User", "00000000000", "admin@example.com", true);
@@ -162,12 +150,11 @@ public class ControllerTest {
         Controller controller = new Controller();
         Usuario usuario = controller.cadastrarUsuario("johndoe", "senha123", "John Doe", "12345678901", "john.doe@example.com", false);
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
 
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
+        Calendar dataAtual = Calendar.getInstance();
+        dataAtual.set(2024, Calendar.SEPTEMBER, 10);
 
         Usuario admin = controller.cadastrarUsuario("admin", "senha123", "Admin User", "00000000000", "admin@example.com", true);
         controller.cadastrarEvento(admin, "Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
@@ -185,12 +172,11 @@ public class ControllerTest {
         Controller controller = new Controller();
         Usuario usuario = controller.cadastrarUsuario("johndoe", "senha123", "John Doe", "12345678901", "john.doe@example.com", false);
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
 
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
+        Calendar dataAtual = Calendar.getInstance();
+        dataAtual.set(2024, Calendar.SEPTEMBER, 10);
 
         Usuario admin = controller.cadastrarUsuario("admin", "senha123", "Admin User", "00000000000", "admin@example.com", true);
         controller.cadastrarEvento(admin, "Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
@@ -250,12 +236,11 @@ public class ControllerTest {
         Controller controller = new Controller();
         Usuario usuario = controller.cadastrarUsuario("johndoe", "senha123", "John Doe", "12345678901", "john.doe@example.com", false);
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2023, Calendar.SEPTEMBER, 10);
-        Date dataPassado = calendar.getTime();
+        Calendar dataPassado = Calendar.getInstance();
+        dataPassado.set(2023, Calendar.SEPTEMBER, 10);
 
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
+        Calendar dataAtual = Calendar.getInstance();
+        dataAtual.set(2024, Calendar.SEPTEMBER, 10);
 
         Usuario admin = controller.cadastrarUsuario("admin", "senha123", "Admin User", "00000000000", "admin@example.com", true);
         controller.cadastrarEvento(admin, "Show de Rock", "Banda XYZ", dataPassado, 100, 100.0);
@@ -270,12 +255,11 @@ public class ControllerTest {
         Controller controller = new Controller();
         Usuario usuario = controller.cadastrarUsuario("johndoe", "senha123", "John Doe", "12345678901", "john.doe@example.com", false);
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
 
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
+        Calendar dataAtual = Calendar.getInstance();
+        dataAtual.set(2024, Calendar.SEPTEMBER, 10);
 
         Usuario admin = controller.cadastrarUsuario("admin", "senha123", "Admin User", "00000000000", "admin@example.com", true);
         controller.cadastrarEvento(admin, "Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
@@ -290,12 +274,11 @@ public class ControllerTest {
         Controller controller = new Controller();
         Usuario usuario = controller.cadastrarUsuario("johndoe", "senha123", "John Doe", "12345678901", "john.doe@example.com", false);
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2023, Calendar.SEPTEMBER, 10);
-        Date dataPassado = calendar.getTime();
+        Calendar dataPassado = Calendar.getInstance();
+        dataPassado.set(2023, Calendar.SEPTEMBER, 10);
 
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
+        Calendar dataAtual = Calendar.getInstance();
+        dataAtual.set(2024, Calendar.SEPTEMBER, 10);
 
         Usuario admin = controller.cadastrarUsuario("admin", "senha123", "Admin User", "00000000000", "admin@example.com", true);
         controller.cadastrarEvento(admin, "Show de Rock", "Banda XYZ", dataPassado, 100, 100.0);
@@ -310,12 +293,11 @@ public class ControllerTest {
         Controller controller = new Controller();
         Usuario usuario = controller.cadastrarUsuario("johndoe", "senha123", "John Doe", "12345678901", "john.doe@example.com", false);
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2023, Calendar.SEPTEMBER, 10);
-        Date dataPassado = calendar.getTime();
+        Calendar dataPassado = Calendar.getInstance();
+        dataPassado.set(2023, Calendar.SEPTEMBER, 10);
 
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
+        Calendar dataAtual = Calendar.getInstance();
+        dataAtual.set(2024, Calendar.SEPTEMBER, 10);
 
         Usuario admin = controller.cadastrarUsuario("admin", "senha123", "Admin User", "00000000000", "admin@example.com", true);
         controller.cadastrarEvento(admin, "Show de Rock", "Banda XYZ", dataPassado, 100, 100.0);
