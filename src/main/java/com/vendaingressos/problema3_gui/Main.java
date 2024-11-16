@@ -13,7 +13,6 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.util.Calendar;
-import java.util.Date;
 
 public class Main extends Application {
     public static Controller controller = new Controller();
@@ -25,11 +24,10 @@ public class Main extends Application {
         }
         Calendar calendar = Calendar.getInstance();
         calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
 
-        Evento evento = controller.cadastrarEvento(admin,"Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
-        Evento evento1 = controller.cadastrarEvento(admin,"Show de Pop", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAABandaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABanda XYZ", dataFuturo, 100, 100.0);
-        Evento evento2 = controller.cadastrarEvento(admin,"Show de Musica Classica", "Banda XYZ", dataFuturo, 100, 100.0);
+        Evento evento = controller.cadastrarEvento(admin,"Show de Rock", "Banda XYZ", calendar, 100, 100.0);
+        Evento evento1 = controller.cadastrarEvento(admin,"Show de Pop", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nAAAAAAAAAAAAAAABandaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABanda XYZ", calendar, 100, 100.0);
+        Evento evento2 = controller.cadastrarEvento(admin,"Show de Musica Classica", "Banda XYZ", calendar, 100, 100.0);
     }
 
     @Override

@@ -127,7 +127,7 @@ public class Controller {
      * @return Evento construído
      * @throws SecurityException caso o usuário que esteja criando não seja um Admin
      */
-    public Evento cadastrarEvento(Usuario usuario, String nomeDoEvento, String descricao, Date data, Integer assentos, Double preco) throws SecurityException, IOException {
+    public Evento cadastrarEvento(Usuario usuario, String nomeDoEvento, String descricao, Calendar data, Integer assentos, Double preco) throws SecurityException, IOException {
         if(!usuario.getAdmin()){
             throw new SecurityException("Somente administradores podem cadastrar eventos.");
         }
@@ -165,7 +165,7 @@ public class Controller {
      * @param dataAtual dia presente
      * @return True, se for bem sucedido o cancelamento e False se mal sucedido.
      */
-    public String cancelarCompra(Usuario usuario, Ingresso ingresso, Date dataAtual) throws IOException {
+    public String cancelarCompra(Usuario usuario, Ingresso ingresso, Calendar dataAtual) throws IOException {
         Evento evento = re.carregarEvento(path, ingresso.getEvento());
 
         if (ingresso.cancelar(dataAtual, evento.getData()) && usuario.getIngressos().remove(ingresso.getId())){
@@ -197,7 +197,7 @@ public class Controller {
      * @param dataAtual data presente
      * @return Lista de todos os eventos disponíveis
      */
-    public List<Evento> listarEventosDisponiveis(Date dataAtual) throws IOException {
+    public List<Evento> listarEventosDisponiveis(Calendar dataAtual) throws IOException {
         List<Evento> eventos = re.carregarTodosEventos(path);
         //filtra a lista de evntos do controller, utilizando o metodo isAtivo(), então transforma de volta em uma lista utilizando .toList()
         return new ArrayList<>(eventos.stream().filter(evento -> evento.isAtivo(dataAtual)).toList());
@@ -254,7 +254,7 @@ public class Controller {
      * @param comentario Conteúdo do comentário
      * @throws IOException caso não consiga carregar ingressos do Usuário
      */
-    public Boolean realizarComentario(Usuario usuario, String nomeEvento, String comentario, Date dataAtual) throws IOException {
+    public Boolean realizarComentario(Usuario usuario, String nomeEvento, String comentario, Calendar dataAtual) throws IOException {
         List<Ingresso> ingressos = ri.carregarTodosIngressos(path, usuario.getId());
         if (ingressos == null) {
             return false;
@@ -310,7 +310,7 @@ public class Controller {
      * @return retorna recibo para enviar por email
      * @throws IOException erro em caso de não conseguir acessar as pastas de arquivo
      */
-    public String realizarCompra(Usuario usuario, String nomeDoEvento, Date data, FormaDePagamento pagamento) throws IOException {
+    public String realizarCompra(Usuario usuario, String nomeDoEvento, Calendar data, FormaDePagamento pagamento) throws IOException {
         List<Evento> todosEventos = re.carregarTodosEventos(path);
 
         for (Evento evento : todosEventos) {
@@ -336,7 +336,7 @@ public class Controller {
      * @return retorna recibo para enviar por email
      * @throws IOException erro em caso de não conseguir acessar as pastas de arquivo
      */
-    public String realizarCompra(Usuario usuario, String nomeDoEvento, Integer assento, Date data, FormaDePagamento pagamento) throws IOException {
+    public String realizarCompra(Usuario usuario, String nomeDoEvento, Integer assento, Calendar data, FormaDePagamento pagamento) throws IOException {
         List<Evento> todosEventos = re.carregarTodosEventos(path);
 
         for (Evento evento : todosEventos) {

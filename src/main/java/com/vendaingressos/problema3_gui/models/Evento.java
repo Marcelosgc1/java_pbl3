@@ -19,7 +19,7 @@ public class Evento implements ComId {
     //atributos
     private String nome;
     private String descricao;
-    private Date data;
+    private Calendar data;
     private Boolean status;
     private Integer assentosDisponiveis;
     private Double preco;
@@ -27,7 +27,7 @@ public class Evento implements ComId {
     private HashMap<String,String> comentarios;
 
     //construtor
-    public Evento(String nome, String descricao, Date data, Integer assentosDisponiveis) {
+    public Evento(String nome, String descricao, Calendar data, Integer assentosDisponiveis) {
         this.nome = nome;
         this.descricao = descricao;
         this.data = data;
@@ -38,7 +38,7 @@ public class Evento implements ComId {
         this.comentarios = new HashMap<>();
     }
 
-    public Evento(String nome, String descricao, Date data, Integer assentosDisponiveis, Double preco) {
+    public Evento(String nome, String descricao, Calendar data, Integer assentosDisponiveis, Double preco) {
         this.nome = nome;
         this.descricao = descricao;
         this.data = data;
@@ -71,11 +71,11 @@ public class Evento implements ComId {
         return descricao;
     }
 
-    public Date getData() {
+    public Calendar getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(Calendar data) {
         this.data = data;
     }
 
@@ -135,7 +135,7 @@ public class Evento implements ComId {
      * @param dataAtual dia presente
      * @return True se evento está ativo ou false se não
      */
-    public Boolean isAtivo(Date dataAtual){
+    public Boolean isAtivo(Calendar dataAtual){
         if (!getStatus()){
             return false;
         }

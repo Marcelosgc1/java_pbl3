@@ -16,6 +16,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -43,7 +44,8 @@ public class ControllerAllEvents {
             }
         });
         try{
-            List<Evento> eventos = controller.listarEventosDisponiveis(new Date());
+            Calendar calendar = Calendar.getInstance();
+            List<Evento> eventos = controller.listarEventosDisponiveis(calendar);
 
             ObservableList<Evento> a = FXCollections.observableArrayList(eventos);
 

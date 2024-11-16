@@ -13,6 +13,8 @@ package com.vendaingressos.problema3_gui.models;
 
 import com.vendaingressos.problema3_gui.interfaces.ComId;
 
+import java.net.CacheRequest;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -87,7 +89,7 @@ public class Ingresso implements ComId {
      * @param dataEvento data do evento
      * @return True se for bem sucedida a atualização e False se não.
      */
-    public Boolean cancelar(Date dataAtual, Date dataEvento){
+    public Boolean cancelar(Calendar dataAtual, Calendar dataEvento){
         if (dataAtual.before(dataEvento)) {
             setStatus(false);
             return true;

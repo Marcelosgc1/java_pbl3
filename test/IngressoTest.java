@@ -22,9 +22,8 @@ public class IngressoTest {
 
     @Test
     public void testCriarIngresso() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
 
         Evento evento = new Evento("Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
         Ingresso ingresso = new Ingresso(evento);
@@ -37,12 +36,10 @@ public class IngressoTest {
 
     @Test
     public void testCancelarIngresso() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
-
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
+        Calendar dataAtual = Calendar.getInstance();
+        dataAtual.set(2024, Calendar.SEPTEMBER, 10);
 
         Evento evento = new Evento("Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
         Ingresso ingresso = new Ingresso(evento);
@@ -53,12 +50,11 @@ public class IngressoTest {
 
     @Test
     public void testCancelarIngressoEventoPassado() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
+        Calendar dataPassado = Calendar.getInstance();
+        dataPassado.set(2023, Calendar.SEPTEMBER, 10);
+        Calendar dataAtual = Calendar.getInstance();
+        dataAtual.set(2024, Calendar.SEPTEMBER, 10);
 
-        calendar.set(2023, Calendar.SEPTEMBER, 10);
-        Date dataPassado = calendar.getTime();
 
         Evento evento = new Evento("Show de Rock", "Banda XYZ", dataPassado, 100, 100.0);
         Ingresso ingresso = new Ingresso(evento);
@@ -70,12 +66,8 @@ public class IngressoTest {
 
     @Test
     public void testIngressosDiferentes() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2024, Calendar.SEPTEMBER, 10);
-        Date dataAtual = calendar.getTime();
-
-        calendar.set(2025, Calendar.SEPTEMBER, 10);
-        Date dataFuturo = calendar.getTime();
+        Calendar dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.SEPTEMBER, 10);
 
         Evento evento = new Evento("Show de Rock", "Banda XYZ", dataFuturo, 100, 100.0);
         Ingresso ingresso1 = new Ingresso(evento);
