@@ -311,19 +311,7 @@ public class Controller {
      * @throws IOException erro em caso de não conseguir acessar as pastas de arquivo
      */
     public String realizarCompra(Usuario usuario, String nomeDoEvento, Calendar data, FormaDePagamento pagamento) throws IOException {
-        List<Evento> todosEventos = re.carregarTodosEventos(path);
-
-        for (Evento evento : todosEventos) {
-            if (evento.getNome().equals(nomeDoEvento) && evento.removerAssento(1)) {
-                Ingresso ingresso = comprarIngresso(usuario, evento);
-
-                Compra c = new Compra(usuario.getEmail(), data, usuario.getId(), List.of(ingresso.getId()), evento.getPreco(), pagamento);
-                rc.salvarCompra(path, c, usuario.getLogin());
-                return c.gerarRecibo();
-
-            }
-        }
-        return null;
+        return realizarCompra(usuario, nomeDoEvento, 1, data, pagamento);
     }
 
     /**
@@ -340,24 +328,34 @@ public class Controller {
         List<Evento> todosEventos = re.carregarTodosEventos(path);
 
         for (Evento evento : todosEventos) {
-            if (evento.getNome().equals(nomeDoEvento) && evento.removerAssento(1)) {
-                List<String> ingressos = new ArrayList<>();
-                for (int i = 0; i < assento; i++) {
-                    Ingresso ingresso = comprarIngresso(usuario, evento);
-                    ingressos.add(ingresso.getId());
-                }
-
-                Compra c = new Compra(usuario.getEmail(), data, usuario.getId(), ingressos, evento.getPreco() * assento, pagamento);
-                rc.salvarCompra(path, c, usuario.getLogin());
-
-                usuario.getCompras().add(c.getId());
-                ru.salvarUsuario(path, usuario);
-
-                return c.gerarRecibo();
+            if (evento.getNome().equals(nomeDoEvento)) {
+                return realizarCompra(usuario, evento, assento, data, pagamento);
             }
         }
         return null;
     }
 
+    public String realizarCompra(Usuario usuario, Evento evento, Integer assento, Calendar data, FormaDePagamento pagamento) throws IOException {
+        if(!evento.removerAssento(assento)) return null;
+
+        List<String> ingressos = new ArrayList<>();
+        Double preco = evento.getPreco();
+        for (int i = 0; i < assento; i++) {
+            Ingresso ingresso = new Ingresso(evento, preco);
+            ri.salvarIngresso(path, ingresso, usuario.getId());
+            ingressos.add(ingresso.getId());
+        }
+
+        Compra c = new Compra(usuario.getEmail(), data, usuario.getId(), ingressos, preco * assento, pagamento);
+        rc.salvarCompra(path, c, usuario.getLogin());
+
+        usuario.getIngressos().addAll(ingressos);
+        usuario.getCompras().add(c.getId());
+        ru.salvarUsuario(path, usuario);
+
+        re.salvarEvento(path, evento);
+
+        return c.gerarRecibo();
+    }
 
 }

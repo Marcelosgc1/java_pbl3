@@ -1,15 +1,13 @@
 package com.vendaingressos.problema3_gui.Enum;
 
-import com.vendaingressos.problema3_gui.controllers.ControllerAllEvents;
-import com.vendaingressos.problema3_gui.controllers.ControllerLogin;
-import com.vendaingressos.problema3_gui.controllers.ControllerMainPage;
-import com.vendaingressos.problema3_gui.controllers.ControllerSingleEvent;
+import com.vendaingressos.problema3_gui.controllers.*;
 
 public enum Page {
     LOGIN("/com/vendaingressos/problema3_gui/loginScreen.fxml", ControllerLogin.class),
     PERFIL("/com/vendaingressos/problema3_gui/mainScreen.fxml", ControllerMainPage.class),
     TODOS_EVENTOS("/com/vendaingressos/problema3_gui/allEvents.fxml", ControllerAllEvents.class),
-    EVENTO_UNICO("/com/vendaingressos/problema3_gui/singleEvent.fxml", ControllerSingleEvent.class)
+    EVENTO_UNICO("/com/vendaingressos/problema3_gui/singleEvent.fxml", ControllerSingleEvent.class),
+    COMPRA("/com/vendaingressos/problema3_gui/purchase.fxml", ControllerPurchase.class)
 
     ;
 

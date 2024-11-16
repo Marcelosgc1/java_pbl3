@@ -32,7 +32,9 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -43,6 +45,8 @@
             <children>
                 <Label fx:id="nome" layoutX="85.0" layoutY="40.0" text="Label" />
                 <Label fx:id="descricao" layoutX="85.0" layoutY="85.0" text="Label" />
+            <Button layoutX="118.0" layoutY="227.0" mnemonicParsing="false" onAction="#comprar" text="Button" />
+            <Spinner fx:id="qnt" layoutX="263.0" layoutY="227.0" prefHeight="26.0" prefWidth="90.0" />
             </children>
         </AnchorPane>
     </children>

@@ -40,7 +40,6 @@ public class ControllerGUI {
 
     public static void mudarPagina(Page page, Stage stage, ComId obj) throws Exception {
         mudarPagina(new Pagina<>(page, obj), stage);
-
     }
 
 }
