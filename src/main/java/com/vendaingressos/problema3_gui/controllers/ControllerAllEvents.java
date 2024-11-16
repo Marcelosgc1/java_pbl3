@@ -57,7 +57,10 @@ public class ControllerAllEvents {
     }
 
     private String formatarTexto(Evento evento) {
-        return evento.getNome() + " - " + evento.getData();
+        return evento.getNome() + " - " +
+                evento.getData().get(Calendar.DAY_OF_MONTH) + "/" +
+                evento.getData().get(Calendar.MONTH) + "/" +
+                evento.getData().get(Calendar.YEAR);
     }
 
     @FXML
