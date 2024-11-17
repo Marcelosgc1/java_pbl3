@@ -6,6 +6,7 @@ import com.vendaingressos.problema3_gui.models.Pagina;
 import com.vendaingressos.problema3_gui.models.Usuario;
 import javafx.stage.Stage;
 
+import java.util.Objects;
 import java.util.Stack;
 
 public class ControllerGUI {
@@ -30,7 +31,9 @@ public class ControllerGUI {
 //    }
 
     public static void mudarPagina(Pagina<?> pagina, Stage stage) throws Exception {
-        pageStack.push(pagina);
+        if (!pagina.getPagina().equals(Page.COMPRA)){
+            pageStack.push(pagina);
+        }
         pagina.mudarDePagina(stage);
     }
 
@@ -38,7 +41,7 @@ public class ControllerGUI {
        mudarPagina(new Pagina<>(page), stage);
     }
 
-    public static void mudarPagina(Page page, Stage stage, ComId obj) throws Exception {
+    public static void mudarPagina(Page page, Stage stage, Object... obj) throws Exception {
         mudarPagina(new Pagina<>(page, obj), stage);
     }
 

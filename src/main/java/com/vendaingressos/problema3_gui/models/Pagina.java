@@ -9,12 +9,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
 
 public class Pagina<Tipo extends ComId> {
     private final Page pagina;
-    private Tipo objeto = null;
+    private Object[] objeto = null;
 
-    public Pagina(Page pagina, Tipo objeto) {
+    public Pagina(Page pagina, Object[] objeto) {
         this.pagina = pagina;
         this.objeto = objeto;
     }
@@ -30,7 +33,12 @@ public class Pagina<Tipo extends ComId> {
         FXMLLoader loader = new FXMLLoader(ControllerGUI.class.getResource(pagina.path));
 
         if (objeto != null) {
-            loader.setController(this.pagina.controllerClass.getDeclaredConstructor(objeto.getClass()).newInstance(objeto));
+            loader.setController(
+                    this.pagina.controllerClass
+                            .getDeclaredConstructors()[0]
+                            .newInstance(objeto)
+            );
+
         }
 
         Scene cenaAtual = new Scene(loader.load());
