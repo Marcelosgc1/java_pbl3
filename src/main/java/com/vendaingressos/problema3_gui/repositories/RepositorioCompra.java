@@ -33,7 +33,7 @@ public class RepositorioCompra extends Repositorio<Compra> {
      * @throws IOException caso haja problema na hora de acessar as pastas
      */
     public Boolean salvarCompra(String path, Compra obj, String login) throws IOException {
-        return super.salvar(path + File.separator + login, obj);
+        return super.salvar(path + File.separator + "Usuarios" + File.separator + login, obj);
     }
 
     /**
@@ -45,7 +45,7 @@ public class RepositorioCompra extends Repositorio<Compra> {
      * @throws IOException caso haja problema na hora de acessar as pastas
      */
     public Compra carregarCompra(String path, String id, String login) throws IOException {
-        return super.carregar(path + File.separator + login, id);
+        return super.carregar(path + File.separator + "Usuarios" + File.separator + login, id);
     }
 
     /**
@@ -56,6 +56,6 @@ public class RepositorioCompra extends Repositorio<Compra> {
      * @throws IOException caso haja problema na hora de acessar as pastas
      */
     public List<Compra> carregarTodosCompra(String path, String login) throws IOException{
-        return super.carregarTodosObjetos(path + File.separator + login);
+        return super.carregarTodosObjetos(path + File.separator + "Usuarios" + File.separator + login);
     }
 }

@@ -25,15 +25,16 @@ import com.vendaingressos.problema3_gui.repositories.RepositorioUsuario;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Controller {
     //atributos
     private HashSet<String> usuarios;
     private List<String> eventos;
-    public final RepositorioIngresso ri = new RepositorioIngresso();
-    public final RepositorioUsuario ru = new RepositorioUsuario();
-    public final RepositorioCompra rc = new RepositorioCompra();
-    public final RepositorioEvento re = new RepositorioEvento();
+    private final RepositorioIngresso ri = new RepositorioIngresso();
+    private final RepositorioUsuario ru = new RepositorioUsuario();
+    private final RepositorioCompra rc = new RepositorioCompra();
+    private final RepositorioEvento re = new RepositorioEvento();
     private String path;
 
     public Controller(String path) {
@@ -361,4 +362,20 @@ public class Controller {
     public List<Compra> listarCompras(Usuario usuarioLogado) throws IOException {
         return rc.carregarTodosCompra(path, usuarioLogado.getId());
     }
+
+    public List<Evento> filtrarPreco(List<Evento> eventos, int ordem) {
+        eventos.sort(Comparator.comparing(evento -> evento.getPreco() * ordem));
+        return eventos;
+    }
+    public List<Evento> filtrarTexto(List<Evento> eventos, String texto) {
+        return eventos.stream().filter(evento -> evento.getNome().toLowerCase().contains(texto.toLowerCase())).collect(Collectors.toList());
+    }
+//    public List<Evento> filtrarCategoria(List<Evento> eventos, Categoria categoria) {
+//        return eventos.stream().filter(evento -> evento.getCategoria().equals(categoria));
+//    }
+    public List<Evento> filtrarData(List<Evento> eventos) {
+        eventos.sort(Comparator.comparing(Evento::getData));
+        return eventos;
+    }
+
 }
