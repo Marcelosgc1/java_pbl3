@@ -45,7 +45,7 @@
             <children>
                 <Label fx:id="nome" layoutX="85.0" layoutY="40.0" text="Label" />
                 <Label fx:id="descricao" layoutX="85.0" layoutY="85.0" text="Label" />
-            <Button layoutX="118.0" layoutY="227.0" mnemonicParsing="false" onAction="#comprar" text="Button" />
+            <Button layoutX="118.0" layoutY="227.0" mnemonicParsing="false" onAction="#comprar" text="Comprar ingresso" />
             <Spinner fx:id="qnt" layoutX="263.0" layoutY="227.0" prefHeight="26.0" prefWidth="90.0" />
             </children>
         </AnchorPane>

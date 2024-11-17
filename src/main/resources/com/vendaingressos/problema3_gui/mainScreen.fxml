@@ -35,7 +35,8 @@
           <content>
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0">
                      <children>
-                        <Button fx:id="verEventos" layoutX="184.0" layoutY="163.0" mnemonicParsing="false" onAction="#verTodosEventos" text="Button" />
+                        <Button fx:id="verEventos" layoutX="184.0" layoutY="163.0" mnemonicParsing="false" onAction="#verTodosEventos" text="Ver Eventos" />
+                        <Button fx:id="verCompras" layoutX="184.0" layoutY="214.0" mnemonicParsing="false" onAction="#verTodasAsCompras" text="Ver compras" />
                      </children></AnchorPane>
           </content>
         </ScrollPane>

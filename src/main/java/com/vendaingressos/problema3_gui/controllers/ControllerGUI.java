@@ -1,12 +1,10 @@
 package com.vendaingressos.problema3_gui.controllers;
 
 import com.vendaingressos.problema3_gui.Enum.Page;
-import com.vendaingressos.problema3_gui.interfaces.ComId;
 import com.vendaingressos.problema3_gui.models.Pagina;
 import com.vendaingressos.problema3_gui.models.Usuario;
 import javafx.stage.Stage;
 
-import java.util.Objects;
 import java.util.Stack;
 
 public class ControllerGUI {
@@ -31,7 +29,7 @@ public class ControllerGUI {
 //    }
 
     public static void mudarPagina(Pagina<?> pagina, Stage stage) throws Exception {
-        if (!pagina.getPagina().equals(Page.COMPRA)){
+        if (!pagina.getPagina().equals(Page.COMPRAR)){
             pageStack.push(pagina);
         }
         pagina.mudarDePagina(stage);

@@ -15,6 +15,8 @@ public class ControllerMainPage {
     private Label username;
     @FXML
     private Button verEventos;
+    @FXML
+    private Button verCompras;
 
     @FXML
     public void initialize() {
@@ -25,6 +27,12 @@ public class ControllerMainPage {
         ControllerGUI.mudarPagina(
             Page.TODOS_EVENTOS,
             (Stage) verEventos.getScene().getWindow()
+        );
+    }
+    public void verTodasAsCompras() throws Exception {
+        ControllerGUI.mudarPagina(
+                Page.TODAS_COMPRAS,
+                (Stage) verCompras.getScene().getWindow()
         );
     }
 }

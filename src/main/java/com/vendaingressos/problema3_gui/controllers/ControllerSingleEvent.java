@@ -2,7 +2,6 @@ package com.vendaingressos.problema3_gui.controllers;
 
 import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.models.Evento;
-import com.vendaingressos.problema3_gui.models.Pagina;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -10,9 +9,6 @@ import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-import static com.vendaingressos.problema3_gui.Main.controller;
-import static com.vendaingressos.problema3_gui.controllers.ControllerGUI.usuarioLogado;
 
 public class ControllerSingleEvent {
 
@@ -46,7 +42,7 @@ public class ControllerSingleEvent {
         novaJanela.initModality(Modality.WINDOW_MODAL);
         novaJanela.initOwner(nome.getScene().getWindow());
         novaJanela.setTitle("comprar ingresso");
-        ControllerGUI.mudarPagina(Page.COMPRA, novaJanela, evento, ingressosQnt);
+        ControllerGUI.mudarPagina(Page.COMPRAR, novaJanela, evento, ingressosQnt);
         qnt.decrement(evento.getAssentosDisponiveis());
 //        controller.realizarCompra(usuarioLogado, evento);
 

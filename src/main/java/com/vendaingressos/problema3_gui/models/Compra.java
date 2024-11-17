@@ -17,13 +17,13 @@ import com.vendaingressos.problema3_gui.interfaces.ComId;
 import java.util.*;
 
 public class Compra implements ComId {
-    private String email;
-    private Calendar data;
-    private List<String> idsIngressos;
-    private String usuario;
-    private Double valorTotal;
-    private FormaDePagamento pagamento;
-    private UUID id;
+    private final String email;
+    private final Calendar data;
+    private final List<String> idsIngressos;
+    private final String usuario;
+    private final Double valorTotal;
+    private final FormaDePagamento pagamento;
+    private final UUID id;
 
 
 
@@ -93,7 +93,7 @@ public class Compra implements ComId {
                     "\nForam comprados " + idsIngressos.size() +
                     " ingressos pelo usuario: " + usuario +
                     "\nValor total: " + valorTotal +
-                    "\nformaDePagamento: " + pagamento;
+                    "\nForma de pagamento: " + pagamento;
         }
         return  "Para: " + email +
                 "\nCancelamento efetuado com sucesso!" +

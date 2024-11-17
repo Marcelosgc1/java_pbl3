@@ -358,4 +358,7 @@ public class Controller {
         return c.gerarRecibo();
     }
 
+    public List<Compra> listarCompras(Usuario usuarioLogado) throws IOException {
+        return rc.carregarTodosCompra(path, usuarioLogado.getId());
+    }
 }
