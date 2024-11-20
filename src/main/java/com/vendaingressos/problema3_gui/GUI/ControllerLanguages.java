@@ -27,13 +27,13 @@ public class ControllerLanguages {
                 return null;
             }
         });
-        language.setValue(Idiomas.PTBR);
+        language.setValue(GerenciadorDeIdiomas.idioma);
     }
 
 
     @FXML
     private void setLanguage() {
-        GerenciadorDeIdiomas.setLanguage(this.language.getValue().localizacao);
+        GerenciadorDeIdiomas.setLanguage(this.language.getValue());
         Pagina<?> peek = ControllerGUI.pageStack.peek();
         peek.getController().setLanguage();
     }
