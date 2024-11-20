@@ -33,6 +33,10 @@ public class ControllerLogin implements GUI {
     private TextField logLogin;
     @FXML
     private TextField logSenha;
+    @FXML
+    private Button cadastra;
+    @FXML
+    private Button loga;
 
 
     @Override
@@ -45,7 +49,8 @@ public class ControllerLogin implements GUI {
         email.setPromptText(GerenciadorDeIdiomas.get("textField.email"));
         logLogin.setPromptText(GerenciadorDeIdiomas.get("textField.login"));
         logSenha.setPromptText(GerenciadorDeIdiomas.get("textField.senha"));
-
+        cadastra.setText(GerenciadorDeIdiomas.get("Button.cadastrar"));
+        loga.setText(GerenciadorDeIdiomas.get("Button.login"));
     }
 
     @Override
