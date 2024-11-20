@@ -2,6 +2,8 @@ package com.vendaingressos.problema3_gui.GUI;
 
 import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
+import com.vendaingressos.problema3_gui.controllers.GerenciadorDeIdiomas;
+import com.vendaingressos.problema3_gui.interfaces.Traduzivel;
 import com.vendaingressos.problema3_gui.models.Evento;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -22,7 +24,7 @@ import java.util.stream.Collectors;
 
 import static com.vendaingressos.problema3_gui.Main.controller;
 
-public class ControllerAllEvents {
+public class ControllerAllEvents implements Traduzivel {
 
 
     @FXML
@@ -50,6 +52,7 @@ public class ControllerAllEvents {
 
     @FXML
     private void initialize() {
+        setLanguage();
 
         ToggleGroup toggleGroup = new ToggleGroup();
         data.setToggleGroup(toggleGroup);
@@ -159,5 +162,14 @@ public class ControllerAllEvents {
         dia1.setTime(Date.from(data1.atStartOfDay(zone).toInstant()));
         return dia1;
 
+    }
+
+    @Override
+    public void setLanguage() {
+        pesquisa.setPromptText(GerenciadorDeIdiomas.get("textField.pesquisa"));
+        maior.setPromptText(GerenciadorDeIdiomas.get("DatePicker.maior"));
+        menor.setPromptText(GerenciadorDeIdiomas.get("DatePicker.menor"));
+        data.setText(GerenciadorDeIdiomas.get("ToggleButton.data"));
+        preco.setText(GerenciadorDeIdiomas.get("ToggleButton.preco"));
     }
 }
