@@ -33,15 +33,12 @@ public class Pagina<Tipo extends ComId> {
 
     public void mudarDePagina(Stage stage) throws Exception{
         FXMLLoader loader = new FXMLLoader(ControllerGUI.class.getResource(pagina.path));
+        loader.setController(
+                this.pagina.controllerClass
+                        .getDeclaredConstructors()[0]
+                        .newInstance(objeto == null ? new Object[]{} : objeto)
+        );
 
-        if (objeto != null) {
-            loader.setController(
-                    this.pagina.controllerClass
-                            .getDeclaredConstructors()[0]
-                            .newInstance(objeto)
-            );
-
-        }
         controller = loader.getController();
         Scene cenaAtual = new Scene(loader.load());
         stage.setScene(cenaAtual);

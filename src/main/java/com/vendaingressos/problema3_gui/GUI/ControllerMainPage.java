@@ -18,6 +18,10 @@ public class ControllerMainPage implements Traduzivel {
     private Button verEventos;
     @FXML
     private Button verCompras;
+//    private String t;
+//    public ControllerMainPage(String t) {
+//        this.t = t;
+//    }
 
     @FXML
     public void initialize() {
