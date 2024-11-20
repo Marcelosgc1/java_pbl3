@@ -2,6 +2,8 @@ package com.vendaingressos.problema3_gui.GUI;
 
 import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
+import com.vendaingressos.problema3_gui.controllers.GerenciadorDeIdiomas;
+import com.vendaingressos.problema3_gui.interfaces.GUI;
 import com.vendaingressos.problema3_gui.models.Evento;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -11,7 +13,7 @@ import javafx.scene.control.SpinnerValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class ControllerSingleEvent {
+public class ControllerSingleEvent implements GUI {
 
     private final Evento evento;
 
@@ -28,13 +30,19 @@ public class ControllerSingleEvent {
         this.evento = evento;
     }
 
+    @Override
+    public void setLanguage() {
+        nome.setText(evento.getNome());
+        descricao.setText(evento.getDescricao());
+        comprar.setText(GerenciadorDeIdiomas.get("Button.comprar"));
+
+    }
+
     @FXML
-    private void initialize() {
+    public void initialize() {
         qnt.setValueFactory(
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(1, evento.getAssentosDisponiveis())
         );
-        nome.setText(evento.getNome());
-        descricao.setText(evento.getDescricao());
     }
 
     public void comprar() throws Exception {
@@ -45,8 +53,6 @@ public class ControllerSingleEvent {
         novaJanela.setTitle("comprar ingresso");
         ControllerGUI.mudarPagina(Page.COMPRAR, novaJanela, evento, ingressosQnt);
         qnt.decrement(evento.getAssentosDisponiveis());
-//        controller.realizarCompra(usuarioLogado, evento);
-
 
     }
 

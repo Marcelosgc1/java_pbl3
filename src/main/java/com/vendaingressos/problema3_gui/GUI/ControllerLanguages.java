@@ -13,7 +13,7 @@ public class ControllerLanguages {
     private ComboBox<Idiomas> language;
 
     @FXML
-    void initialize() {
+    public void initialize() {
         language.getItems().addAll(Idiomas.values());
 
         language.setConverter(new StringConverter<>() {
@@ -34,7 +34,7 @@ public class ControllerLanguages {
     @FXML
     private void setLanguage() {
         GerenciadorDeIdiomas.setLanguage(this.language.getValue());
-        Pagina<?> peek = ControllerGUI.pageStack.peek();
+        Pagina peek = ControllerGUI.pageStack.peek();
         peek.getController().setLanguage();
     }
 

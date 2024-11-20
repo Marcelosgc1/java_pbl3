@@ -92,10 +92,19 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        ControllerGUI.pageStack.push(new Pagina<>(Page.LOGIN));
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(Page.LOGIN.path));
-        VBox root = loader.load();
+        Pagina pagina = new Pagina(Page.LOGIN);
 
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(Page.LOGIN.path));
+
+        loader.setController(
+                Page.LOGIN.controllerClass
+                        .getDeclaredConstructors()[0]
+                        .newInstance()
+        );
+
+        pagina.setController(loader.getController());
+        ControllerGUI.pageStack.push(pagina);
+        VBox root = loader.load();
         Scene scene = new Scene(root, 900, 600);
         primaryStage.setTitle("Sistema de Venda de Ingressos");
         primaryStage.setScene(scene);

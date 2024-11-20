@@ -2,12 +2,14 @@ package com.vendaingressos.problema3_gui.GUI;
 
 import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
+import com.vendaingressos.problema3_gui.controllers.GerenciadorDeIdiomas;
+import com.vendaingressos.problema3_gui.interfaces.GUI;
 import com.vendaingressos.problema3_gui.models.Pagina;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-public class ControllerTopBar {
+public class ControllerTopBar implements GUI {
     @FXML
     private MenuButton perfil;
     @FXML
@@ -18,15 +20,17 @@ public class ControllerTopBar {
     private Button backButton;
 
 
+    @Override
+    public void setLanguage() {
+        perfil.setText(ControllerGUI.usuarioLogado.getLogin());
+        perfilMenu.setText(GerenciadorDeIdiomas.get("MenuItem.perfil"));
+        logout.setText(GerenciadorDeIdiomas.get("MenuItem.logout"));
+        backButton.setText(GerenciadorDeIdiomas.get("Button.voltar"));
+    }
+
     @FXML
     public void initialize() {
-        perfil.setText(ControllerGUI.usuarioLogado.getLogin());
-        perfilMenu.setText("Ver Perfil");
-        logout.setText("Logout");
-        backButton.setText("Voltar");
-
-
-
+        setLanguage();
     }
 
     public void voltarParaLogin() throws Exception {
@@ -39,7 +43,7 @@ public class ControllerTopBar {
 
     public void irParaPerfil() throws Exception {
         if (ControllerGUI.pageStack.peek().getPagina().equals(Page.PERFIL)) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Você já está na página de perfil!");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, GerenciadorDeIdiomas.get("Error.jaEmPerfil"));
             alert.showAndWait();
             return;
         }
@@ -51,7 +55,7 @@ public class ControllerTopBar {
 
     public void voltar() throws Exception {
         ControllerGUI.pageStack.pop();
-        Pagina<?> lastPage = ControllerGUI.pageStack.pop();
+        Pagina lastPage = ControllerGUI.pageStack.pop();
         if (lastPage != null) {
             ControllerGUI.mudarPagina(lastPage, (Stage) perfil.getScene().getWindow());
             return;

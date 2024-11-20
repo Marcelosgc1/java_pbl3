@@ -3,7 +3,7 @@ package com.vendaingressos.problema3_gui.GUI;
 import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
 import com.vendaingressos.problema3_gui.controllers.GerenciadorDeIdiomas;
-import com.vendaingressos.problema3_gui.interfaces.Traduzivel;
+import com.vendaingressos.problema3_gui.interfaces.GUI;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import static com.vendaingressos.problema3_gui.controllers.ControllerGUI.usuarioLogado;
 
-public class ControllerMainPage implements Traduzivel {
+public class ControllerMainPage implements GUI {
     @FXML
     private Label username;
     @FXML

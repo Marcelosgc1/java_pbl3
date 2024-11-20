@@ -3,7 +3,7 @@ package com.vendaingressos.problema3_gui.GUI;
 import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
 import com.vendaingressos.problema3_gui.controllers.GerenciadorDeIdiomas;
-import com.vendaingressos.problema3_gui.interfaces.Traduzivel;
+import com.vendaingressos.problema3_gui.interfaces.GUI;
 import com.vendaingressos.problema3_gui.models.Evento;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 
 import static com.vendaingressos.problema3_gui.Main.controller;
 
-public class ControllerAllEvents implements Traduzivel {
+public class ControllerAllEvents implements GUI {
 
 
     @FXML
@@ -51,7 +51,7 @@ public class ControllerAllEvents implements Traduzivel {
 
 
     @FXML
-    private void initialize() {
+    public void initialize() {
         setLanguage();
 
         ToggleGroup toggleGroup = new ToggleGroup();

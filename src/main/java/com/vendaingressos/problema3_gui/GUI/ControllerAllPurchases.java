@@ -1,5 +1,6 @@
 package com.vendaingressos.problema3_gui.GUI;
 
+import com.vendaingressos.problema3_gui.interfaces.GUI;
 import com.vendaingressos.problema3_gui.models.Compra;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,13 +14,19 @@ import java.util.List;
 import static com.vendaingressos.problema3_gui.Main.controller;
 import static com.vendaingressos.problema3_gui.controllers.ControllerGUI.usuarioLogado;
 
-public class ControllerAllPurchases {
+public class ControllerAllPurchases implements GUI {
 
     @FXML
     private ListView<Compra> todasCompras;
 
+    @Override
+    public void setLanguage() {
+
+    }
+
     @FXML
-    private void initialize() {
+    public void initialize() {
+        setLanguage();
         todasCompras.setCellFactory(tc -> new ListCell<>(){
             @Override
             public void updateItem(Compra compra, boolean empty) {

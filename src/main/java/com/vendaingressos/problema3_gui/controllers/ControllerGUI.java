@@ -10,25 +10,9 @@ import java.util.Stack;
 public class ControllerGUI {
 
     public static Usuario usuarioLogado;
-    public static Stack<Pagina<?>> pageStack = new Stack<>();
+    public static Stack<Pagina> pageStack = new Stack<>();
 
-
-//    public static void mudarPagina(Pagina proxPagina, Stage stage) throws IOException {
-//        pageStack.push(proxPagina);
-//        FXMLLoader loader = new FXMLLoader(ControllerGUI.class.getResource(proxPagina.path));
-//        loader.getRoot();
-//        Scene cenaAtual = new Scene(loader.load());
-//        stage.setScene(cenaAtual);
-//        stage.show();
-//    }
-
-//    public static void mudarPagina(Pagina proxPagina, Scene scene) throws IOException {
-//        pageStack.push(proxPagina);
-//        FXMLLoader loader = new FXMLLoader(ControllerGUI.class.getResource(proxPagina.path));
-//        scene.setRoot(loader.load());
-//    }
-
-    public static void mudarPagina(Pagina<?> pagina, Stage stage) throws Exception {
+    public static void mudarPagina(Pagina pagina, Stage stage) throws Exception {
         if (!pagina.getPagina().equals(Page.COMPRAR)){
             pageStack.push(pagina);
         }
@@ -36,11 +20,15 @@ public class ControllerGUI {
     }
 
     public static void mudarPagina(Page page, Stage stage) throws Exception {
-       mudarPagina(new Pagina<>(page), stage);
+       mudarPagina(page, stage,null);
     }
 
     public static void mudarPagina(Page page, Stage stage, Object... obj) throws Exception {
-        mudarPagina(new Pagina<>(page, obj), stage);
+        Pagina pagina = new Pagina(page);
+        if (!pagina.getPagina().equals(Page.COMPRAR)){
+            pageStack.push(pagina);
+        }
+        pagina.mudarDePagina(stage, obj);
     }
 
 }
