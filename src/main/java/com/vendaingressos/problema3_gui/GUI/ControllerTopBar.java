@@ -1,12 +1,10 @@
-package com.vendaingressos.problema3_gui.controllers;
+package com.vendaingressos.problema3_gui.GUI;
 
 import com.vendaingressos.problema3_gui.Enum.Page;
+import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
 import com.vendaingressos.problema3_gui.models.Pagina;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 public class ControllerTopBar {
@@ -19,12 +17,16 @@ public class ControllerTopBar {
     @FXML
     private Button backButton;
 
+
     @FXML
     public void initialize() {
         perfil.setText(ControllerGUI.usuarioLogado.getLogin());
         perfilMenu.setText("Ver Perfil");
         logout.setText("Logout");
         backButton.setText("Voltar");
+
+
+
     }
 
     public void voltarParaLogin() throws Exception {

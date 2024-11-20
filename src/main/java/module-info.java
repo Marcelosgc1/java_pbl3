@@ -16,4 +16,6 @@ module com.vendaingressos.problema3_gui {
     exports com.vendaingressos.problema3_gui.controllers;
     exports com.vendaingressos.problema3_gui.interfaces;
     opens com.vendaingressos.problema3_gui.controllers to javafx.fxml;
+    exports com.vendaingressos.problema3_gui.GUI;
+    opens com.vendaingressos.problema3_gui.GUI to javafx.fxml;
 }

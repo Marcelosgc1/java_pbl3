@@ -1,6 +1,7 @@
-package com.vendaingressos.problema3_gui.controllers;
+package com.vendaingressos.problema3_gui.GUI;
 
 import com.vendaingressos.problema3_gui.Enum.Page;
+import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
 import com.vendaingressos.problema3_gui.models.Evento;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

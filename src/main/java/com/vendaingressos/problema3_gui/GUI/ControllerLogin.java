@@ -1,6 +1,7 @@
-package com.vendaingressos.problema3_gui.controllers;
+package com.vendaingressos.problema3_gui.GUI;
 
 import com.vendaingressos.problema3_gui.Enum.Page;
+import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
 import com.vendaingressos.problema3_gui.exceptions.AlreadyExistingUserException;
 import com.vendaingressos.problema3_gui.exceptions.EmptyFieldException;
 import com.vendaingressos.problema3_gui.exceptions.WrongPasswordException;
@@ -8,8 +9,6 @@ import com.vendaingressos.problema3_gui.models.Usuario;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 import static com.vendaingressos.problema3_gui.Main.controller;
 

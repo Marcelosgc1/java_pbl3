@@ -1,10 +1,8 @@
-package com.vendaingressos.problema3_gui.controllers;
+package com.vendaingressos.problema3_gui.GUI;
 
 import com.vendaingressos.problema3_gui.Enum.FormaDePagamento;
 import com.vendaingressos.problema3_gui.models.Evento;
-import com.vendaingressos.problema3_gui.models.Usuario;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -15,7 +13,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Calendar;
-import java.util.List;
 import java.util.Optional;
 
 import static com.vendaingressos.problema3_gui.Main.controller;

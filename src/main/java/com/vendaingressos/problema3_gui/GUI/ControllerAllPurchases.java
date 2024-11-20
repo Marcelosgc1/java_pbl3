@@ -1,15 +1,13 @@
-package com.vendaingressos.problema3_gui.controllers;
+package com.vendaingressos.problema3_gui.GUI;
 
 import com.vendaingressos.problema3_gui.models.Compra;
-import com.vendaingressos.problema3_gui.models.Evento;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 
-import java.util.Calendar;
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.vendaingressos.problema3_gui.Main.controller;
@@ -31,17 +29,20 @@ public class ControllerAllPurchases {
                 }
                 else {
                     setText(compra.gerarRecibo());
-
                 }
             }
         });
+        List<Compra> compras = List.of();
         try{
-            List<Compra> compras = controller.listarCompras(usuarioLogado);
+            compras = controller.listarCompras(usuarioLogado);
+            if (compras.isEmpty()) {
+                throw new Exception();
+            }
+        }catch (Exception e){
+            compras = new ArrayList<>();
+        }finally {
             ObservableList<Compra> a = FXCollections.observableArrayList(compras);
             todasCompras.setItems(a);
-        }catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.showAndWait();
         }
     }
 }
