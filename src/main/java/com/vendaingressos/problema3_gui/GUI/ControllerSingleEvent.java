@@ -40,6 +40,7 @@ public class ControllerSingleEvent implements GUI {
 
     @FXML
     public void initialize() {
+        setLanguage();
         qnt.setValueFactory(
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(1, evento.getAssentosDisponiveis())
         );
