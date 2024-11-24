@@ -1,5 +1,6 @@
 package com.vendaingressos.problema3_gui;
 
+import com.vendaingressos.problema3_gui.Enum.FormaDePagamento;
 import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.controllers.Controller;
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
@@ -87,7 +88,15 @@ public class Main extends Application {
         Evento evento29 = controller.cadastrarEvento(admin, "Show de Música Instrumental", "Grupo Harmonia", calendar, 100, 85.0);
         calendar.set(2028, Calendar.JANUARY, 20);
         Evento evento30 = controller.cadastrarEvento(admin, "Show de Música Experimental", "Coletivo X", calendar, 150, 105.0);
-
+        calendar.set(2023, Calendar.FEBRUARY, 10);
+        controller.realizarCompra(admin, evento1, 1, calendar, FormaDePagamento.BOLETO);
+        calendar.set(2028, Calendar.JANUARY, 20);
+        controller.realizarComentario(admin, evento1, "a", calendar);
+        controller.realizarComentario(admin, evento1, "b", calendar);
+        controller.realizarComentario(admin, evento1, "c", calendar);
+        controller.realizarComentario(admin, evento1, "d", calendar);
+        controller.realizarComentario(admin, evento1, "e", calendar);
+        controller.realizarComentario(admin, evento1, "f", calendar);
     }
 
     @Override

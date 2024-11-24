@@ -12,8 +12,7 @@
 package com.vendaingressos.problema3_gui.controllers;
 
 import com.vendaingressos.problema3_gui.Enum.FormaDePagamento;
-import com.vendaingressos.problema3_gui.exceptions.UserNotFoundException;
-import com.vendaingressos.problema3_gui.exceptions.WrongPasswordException;
+import com.vendaingressos.problema3_gui.exceptions.*;
 import com.vendaingressos.problema3_gui.models.Compra;
 import com.vendaingressos.problema3_gui.models.Evento;
 import com.vendaingressos.problema3_gui.models.Ingresso;
@@ -205,6 +204,13 @@ public class Controller {
     }
 
     /**
+     * @return Lista de todos os eventos disponíveis
+     */
+    public List<Evento> listarEventos() throws IOException {
+        return re.carregarTodosEventos(path);
+    }
+
+    /**
      * Altera senha do usuário
      * @param usuario objeto que terá seu atributo alterado
      * @param senha novo atributo
@@ -282,6 +288,34 @@ public class Controller {
             }
         }
         return false;
+    }
+    public void realizarComentario(Usuario usuario, Evento evento, String comentario, Calendar dataAtual) throws IOException {
+        List<Ingresso> ingressos = ri.carregarTodosIngressos(path, usuario.getId());
+        System.out.println(ingressos);
+        if (ingressos == null) {
+            throw new NoTicketException();
+        }
+        for (Ingresso ingresso : ingressos) {
+            System.out.println(ingresso);
+            if (!ingresso.getEvento().equals(evento.getId())) {
+                continue;
+            }
+            if (!evento.isAtivo(dataAtual)) {
+                HashMap<String, String> comentarios = evento.getComentarios();
+                if(comentarios.get(usuario.getId()) != null) {
+                    throw new AlreadyExistingReviewException();
+                }
+                comentar(evento, usuario, comentario);
+                return;
+            }
+            throw new NoTicketException();
+        }
+
+    }
+
+    public void comentar(Evento evento, Usuario usuario, String comentario) throws IOException {
+        evento.getComentarios().put(usuario.getId(), comentario);
+        re.salvarEvento(path, evento);
     }
 
     /**

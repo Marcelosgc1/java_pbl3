@@ -15,4 +15,7 @@ public enum Idiomas {
         this.texto = texto;
         this.localizacao = localizacao;
     }
+    public String toString() {
+        return texto;
+    }
 }

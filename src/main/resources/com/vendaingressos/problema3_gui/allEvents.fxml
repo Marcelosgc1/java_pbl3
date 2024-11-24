@@ -19,6 +19,6 @@
             <ToggleButton fx:id="preco" mnemonicParsing="false" text="Preco" />
          </children>
       </HBox>
-      <ListView fx:id="todosEventos" onMouseClicked="#aaa" prefHeight="350.0" prefWidth="200.0" />
+      <ListView fx:id="todosEventos" onMouseClicked="#detalhesDoEvento" prefHeight="350.0" prefWidth="200.0" />
    </children>
 </VBox>

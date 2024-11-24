@@ -2,7 +2,6 @@ package com.vendaingressos.problema3_gui.GUI;
 
 import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
-import com.vendaingressos.problema3_gui.controllers.GerenciadorDeIdiomas;
 import com.vendaingressos.problema3_gui.interfaces.GUI;
 import com.vendaingressos.problema3_gui.models.Evento;
 import javafx.beans.value.ChangeListener;
@@ -24,7 +23,7 @@ import java.util.stream.Collectors;
 
 import static com.vendaingressos.problema3_gui.Main.controller;
 
-public class ControllerAllEvents implements GUI {
+public class AllEvents implements GUI {
 
 
     @FXML
@@ -44,8 +43,9 @@ public class ControllerAllEvents implements GUI {
     private ObservableList<Evento> eventosFiltrados;
     private final List<Evento> eventos;
 
-    public ControllerAllEvents() throws IOException {
-        eventos = controller.listarEventosDisponiveis(Calendar.getInstance());
+    public AllEvents() throws IOException {
+//        eventos = controller.listarEventosDisponiveis(Calendar.getInstance());
+        eventos = controller.listarEventos();
         eventosFiltrados = FXCollections.observableArrayList(eventos);
     }
 
@@ -94,7 +94,6 @@ public class ControllerAllEvents implements GUI {
                 }
                 else {
                     setText(formatarTexto(evento));
-
                 }
             }
         });
@@ -129,11 +128,13 @@ public class ControllerAllEvents implements GUI {
     }
 
     @FXML
-    private void aaa(){
+    private void detalhesDoEvento(){
         todosEventos.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
                 try {
-                    ControllerGUI.mudarPagina(Page.EVENTO_UNICO, (Stage) todosEventos.getScene().getWindow(), todosEventos.getSelectionModel().getSelectedItem());
+                    Evento eventoSelecionado = todosEventos.getSelectionModel().getSelectedItem();
+                    Page EVENTO_UNICO = eventoSelecionado.isAtivo(Calendar.getInstance()) ? Page.EVENTO_UNICO_ATIVO : Page.EVENTO_UNICO_DESATIVADO;
+                    ControllerGUI.mudarPagina(EVENTO_UNICO, (Stage) todosEventos.getScene().getWindow(), eventoSelecionado);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
@@ -166,10 +167,10 @@ public class ControllerAllEvents implements GUI {
 
     @Override
     public void setLanguage() {
-        pesquisa.setPromptText(GerenciadorDeIdiomas.get("textField.pesquisa"));
-        maior.setPromptText(GerenciadorDeIdiomas.get("DatePicker.maior"));
-        menor.setPromptText(GerenciadorDeIdiomas.get("DatePicker.menor"));
-        data.setText(GerenciadorDeIdiomas.get("ToggleButton.data"));
-        preco.setText(GerenciadorDeIdiomas.get("ToggleButton.preco"));
+        pesquisa.setPromptText(ControllerGUI.get("textField.pesquisa"));
+        maior.setPromptText(ControllerGUI.get("DatePicker.maior"));
+        menor.setPromptText(ControllerGUI.get("DatePicker.menor"));
+        data.setText(ControllerGUI.get("ToggleButton.data"));
+        preco.setText(ControllerGUI.get("ToggleButton.preco"));
     }
 }

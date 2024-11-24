@@ -2,14 +2,13 @@ package com.vendaingressos.problema3_gui.GUI;
 
 import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
-import com.vendaingressos.problema3_gui.controllers.GerenciadorDeIdiomas;
 import com.vendaingressos.problema3_gui.interfaces.GUI;
 import com.vendaingressos.problema3_gui.models.Pagina;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-public class ControllerTopBar implements GUI {
+public class TopBar implements GUI {
     @FXML
     private MenuButton perfil;
     @FXML
@@ -23,9 +22,9 @@ public class ControllerTopBar implements GUI {
     @Override
     public void setLanguage() {
         perfil.setText(ControllerGUI.usuarioLogado.getLogin());
-        perfilMenu.setText(GerenciadorDeIdiomas.get("MenuItem.perfil"));
-        logout.setText(GerenciadorDeIdiomas.get("MenuItem.logout"));
-        backButton.setText(GerenciadorDeIdiomas.get("Button.voltar"));
+        perfilMenu.setText(ControllerGUI.get("MenuItem.perfil"));
+        logout.setText(ControllerGUI.get("MenuItem.logout"));
+        backButton.setText(ControllerGUI.get("Button.voltar"));
     }
 
     @FXML
@@ -43,7 +42,7 @@ public class ControllerTopBar implements GUI {
 
     public void irParaPerfil() throws Exception {
         if (ControllerGUI.pageStack.peek().getPagina().equals(Page.PERFIL)) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, GerenciadorDeIdiomas.get("Error.jaEmPerfil"));
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, ControllerGUI.get("Error.jaEmPerfil"));
             alert.showAndWait();
             return;
         }

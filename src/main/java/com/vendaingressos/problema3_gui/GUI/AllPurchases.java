@@ -14,7 +14,7 @@ import java.util.List;
 import static com.vendaingressos.problema3_gui.Main.controller;
 import static com.vendaingressos.problema3_gui.controllers.ControllerGUI.usuarioLogado;
 
-public class ControllerAllPurchases implements GUI {
+public class AllPurchases implements GUI {
 
     @FXML
     private ListView<Compra> todasCompras;

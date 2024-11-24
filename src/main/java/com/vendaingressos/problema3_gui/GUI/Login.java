@@ -2,7 +2,6 @@ package com.vendaingressos.problema3_gui.GUI;
 
 import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
-import com.vendaingressos.problema3_gui.controllers.GerenciadorDeIdiomas;
 import com.vendaingressos.problema3_gui.exceptions.AlreadyExistingUserException;
 import com.vendaingressos.problema3_gui.exceptions.EmptyFieldException;
 import com.vendaingressos.problema3_gui.exceptions.WrongPasswordException;
@@ -14,7 +13,7 @@ import javafx.stage.Stage;
 
 import static com.vendaingressos.problema3_gui.Main.controller;
 
-public class ControllerLogin implements GUI {
+public class Login implements GUI {
 
 
     @FXML
@@ -41,16 +40,16 @@ public class ControllerLogin implements GUI {
 
     @Override
     public void setLanguage() {
-        login.setPromptText(GerenciadorDeIdiomas.get("textField.login"));
-        senha.setPromptText(GerenciadorDeIdiomas.get("textField.senha"));
-        senhaConfirm.setPromptText(GerenciadorDeIdiomas.get("textField.senhaConfirm"));
-        nome.setPromptText(GerenciadorDeIdiomas.get("textField.nome"));
-        cpf.setPromptText(GerenciadorDeIdiomas.get("textField.cpf"));
-        email.setPromptText(GerenciadorDeIdiomas.get("textField.email"));
-        logLogin.setPromptText(GerenciadorDeIdiomas.get("textField.login"));
-        logSenha.setPromptText(GerenciadorDeIdiomas.get("textField.senha"));
-        cadastra.setText(GerenciadorDeIdiomas.get("Button.cadastrar"));
-        loga.setText(GerenciadorDeIdiomas.get("Button.login"));
+        login.setPromptText(ControllerGUI.get("textField.login"));
+        senha.setPromptText(ControllerGUI.get("textField.senha"));
+        senhaConfirm.setPromptText(ControllerGUI.get("textField.senhaConfirm"));
+        nome.setPromptText(ControllerGUI.get("textField.nome"));
+        cpf.setPromptText(ControllerGUI.get("textField.cpf"));
+        email.setPromptText(ControllerGUI.get("textField.email"));
+        logLogin.setPromptText(ControllerGUI.get("textField.login"));
+        logSenha.setPromptText(ControllerGUI.get("textField.senha"));
+        cadastra.setText(ControllerGUI.get("Button.cadastrar"));
+        loga.setText(ControllerGUI.get("Button.login"));
     }
 
     @Override
@@ -69,16 +68,16 @@ public class ControllerLogin implements GUI {
             String userPasswordConfirm = senhaConfirm.getText();
 
             if(userEmail.isEmpty() || userCpf.isEmpty() || userNome.isEmpty() || userLogin.isEmpty() || userPassword.isEmpty() || userPasswordConfirm.isEmpty()) {
-                throw new EmptyFieldException(GerenciadorDeIdiomas.get("Error.campoVazio"));
+                throw new EmptyFieldException(ControllerGUI.get("Error.campoVazio"));
             }
             if(!userPassword.equals(userPasswordConfirm)) {
-                throw new WrongPasswordException(GerenciadorDeIdiomas.get("Error.senhas"));
+                throw new WrongPasswordException(ControllerGUI.get("Error.senhas"));
             }
 
             Usuario a = controller.cadastrarUsuario(userLogin, userPassword, userNome, userCpf, userEmail, false);
 
             if(a == null) {
-                throw new AlreadyExistingUserException(GerenciadorDeIdiomas.get("Error.cadastrado"));
+                throw new AlreadyExistingUserException(ControllerGUI.get("Error.cadastrado"));
             }
 
             login.clear();
@@ -88,7 +87,7 @@ public class ControllerLogin implements GUI {
             email.clear();
             senhaConfirm.clear();
 
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, GerenciadorDeIdiomas.get("Error.sucesso"), ButtonType.OK);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, ControllerGUI.get("Error.sucesso"), ButtonType.OK);
             alert.showAndWait();
 
         }catch (Exception e){
@@ -103,7 +102,7 @@ public class ControllerLogin implements GUI {
             String userLogin = logLogin.getText();
             String userPassword = logSenha.getText();
             if (userPassword.isEmpty() || userLogin.isEmpty()) {
-                throw new EmptyFieldException(GerenciadorDeIdiomas.get("Error.campoVazioLogin"));
+                throw new EmptyFieldException(ControllerGUI.get("Error.campoVazioLogin"));
             }
             ControllerGUI.usuarioLogado = controller.loginUsuario(userLogin, userPassword);
             System.out.println(userLogin + " logado com sucesso!");

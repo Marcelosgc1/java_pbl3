@@ -6,7 +6,7 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.HBox?>
 
-<HBox xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vendaingressos.problema3_gui.GUI.ControllerTopBar">
+<HBox xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vendaingressos.problema3_gui.GUI.TopBar">
     <children>
         <ToolBar HBox.hgrow="ALWAYS">
             <items>
