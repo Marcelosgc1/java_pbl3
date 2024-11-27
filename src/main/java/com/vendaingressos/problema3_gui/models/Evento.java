@@ -19,7 +19,7 @@ public class Evento implements ComId {
     //atributos
     private String nome;
     private String descricao;
-    private Calendar data;
+    private final Calendar data;
     private Boolean status;
     private Integer assentosDisponiveis;
     private Double preco;
@@ -75,9 +75,9 @@ public class Evento implements ComId {
         return data;
     }
 
-    public void setData(Calendar data) {
-        this.data = data;
-    }
+//    public void setData(Calendar data) {
+//        this.data = data;
+//    }
 
     public Boolean getStatus() {
         return status;

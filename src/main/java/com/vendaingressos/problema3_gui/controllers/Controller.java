@@ -289,6 +289,7 @@ public class Controller {
         }
         return false;
     }
+
     public void realizarComentario(Usuario usuario, Evento evento, String comentario, Calendar dataAtual) throws IOException {
         List<Ingresso> ingressos = ri.carregarTodosIngressos(path, usuario.getId());
         System.out.println(ingressos);
