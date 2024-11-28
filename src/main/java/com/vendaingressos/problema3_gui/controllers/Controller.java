@@ -204,7 +204,7 @@ public class Controller {
     }
 
     /**
-     * @return Lista de todos os eventos disponíveis
+     * @return Lista de todos os eventos
      */
     public List<Evento> listarEventos() throws IOException {
         return re.carregarTodosEventos(path);
