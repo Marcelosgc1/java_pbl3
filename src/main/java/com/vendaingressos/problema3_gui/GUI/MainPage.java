@@ -107,7 +107,10 @@ public class MainPage implements GUI {
         newPass.setPromptText(ControllerGUI.get("textField.newPass"));
         confirmChange.setText(ControllerGUI.get("Button.confirmChange"));
         data.setText(
-                ControllerGUI.get("Label.data")
+                ControllerGUI.get("textField.login") + ": " + usuarioLogado.getLogin() + "\n" +
+                ControllerGUI.get("textField.email") + ": " + usuarioLogado.getEmail() + "\n" +
+                ControllerGUI.get("textField.nome") + ": " + usuarioLogado.getNome() + "\n" +
+                ControllerGUI.get("textField.cpf") + ": " + usuarioLogado.getCpf()
         );
     }
 

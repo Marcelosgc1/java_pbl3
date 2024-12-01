@@ -14,7 +14,12 @@ import javafx.stage.Stage;
 import static com.vendaingressos.problema3_gui.Main.controller;
 
 public class Login implements GUI {
-
+    @FXML
+    private Label message;
+    @FXML
+    private Label signup;
+    @FXML
+    private Label labelLogin;
 
     @FXML
     private TextField login;
@@ -50,6 +55,10 @@ public class Login implements GUI {
         logSenha.setPromptText(ControllerGUI.get("textField.senha"));
         cadastra.setText(ControllerGUI.get("Button.cadastrar"));
         loga.setText(ControllerGUI.get("Button.login"));
+        labelLogin.setText(ControllerGUI.get("label.titleLogin"));
+        signup.setText(ControllerGUI.get("label.titleSignUp"));
+        message.setText(ControllerGUI.get("label.messageLogin"));
+
     }
 
     @Override

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <fx:include source="header.fxml" />
+      <TextField fx:id="pesquisa" prefHeight="26.0" prefWidth="499.0" />
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <DatePicker fx:id="menor" promptText="min" />
+            <DatePicker fx:id="maior" promptText="max" />
+            <ToggleButton fx:id="data" mnemonicParsing="false" text="Data" />
+            <ToggleButton fx:id="preco" mnemonicParsing="false" text="Preco" />
+         </children>
+      </HBox>
+      <ListView fx:id="todosEventos" onMouseClicked="#detalhesDoEvento" prefHeight="350.0" prefWidth="200.0" />
+   </children>
+</VBox>
