@@ -26,6 +26,8 @@ import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static com.vendaingressos.problema3_gui.Main.controller;
+
 public class Controller {
     //atributos
     private HashSet<String> usuarios;
@@ -167,21 +169,27 @@ public class Controller {
      */
     public String cancelarCompra(Usuario usuario, Ingresso ingresso, Calendar dataAtual) throws IOException {
         Evento evento = re.carregarEvento(path, ingresso.getEvento());
-
-        if (ingresso.cancelar(dataAtual, evento.getData()) && usuario.getIngressos().remove(ingresso.getId())){
-            evento.adicionarAssento(1);
-
-            List<String> ingressoCancelado = new ArrayList<String>();
-            ingressoCancelado.add(ingresso.getId());
-            Compra c = new Compra(usuario.getEmail(),dataAtual, usuario.getId(), ingressoCancelado, evento.getPreco() * -1);
-
-            rc.salvarCompra(path, c, usuario.getId());
-            re.salvarEvento(path, evento);
-            ri.salvarIngresso(path, ingresso, usuario.getId());
-            ru.salvarUsuario(path, usuario);
-            return c.gerarRecibo();
+        if(!ingresso.cancelar(dataAtual, evento.getData())){
+            System.out.println("aa");
+            return null;
         }
-        return null;
+        if(!usuario.getIngressos().remove(ingresso.getId())){
+            System.out.println("bb");
+            return null;
+        }
+
+
+        evento.adicionarAssento(1);
+
+        List<String> ingressoCancelado = new ArrayList<>();
+        ingressoCancelado.add(ingresso.getId());
+        Compra c = new Compra(usuario.getEmail(),dataAtual, usuario.getId(), ingressoCancelado, evento.getPreco() * -1);
+        System.out.println("CANCELOU");
+        rc.salvarCompra(path, c, usuario.getId());
+        re.salvarEvento(path, evento);
+        ri.salvarIngresso(path, ingresso, usuario.getId());
+        ru.salvarUsuario(path, usuario);
+        return c.gerarRecibo();
     }
 
     /**
@@ -192,6 +200,28 @@ public class Controller {
         return ri.carregarTodosIngressos(path, usuario.getLogin());
     }
 
+
+    /**
+     * @param usuario que terá seus ingressos listados
+     * @return Lista de Ingressos
+     */
+    public List<Ingresso> listarIngressosAtualizado(Usuario usuario, Calendar dataAtual) throws IOException {
+        List<Ingresso> ingressos = listarIngressosComprados(usuario);
+        return ingressos.stream()
+                .filter(ingresso -> !ingresso.getStatus().equals("cancelado"))
+                .map(ingresso -> updateIngresso(ingresso, dataAtual, usuario.getId()))
+                .toList();
+    }
+
+    private Ingresso updateIngresso(Ingresso ingresso, Calendar dataAtual, String login){
+        try{
+            ingresso.setStatus(dataAtual.before(controller.carregarEvento(ingresso.getEvento()).getData()) ? "ativo" : "inativo");
+            ri.salvarIngresso(path, ingresso, login);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return ingresso;
+    }
 
     /**
      * @param dataAtual data presente
@@ -398,19 +428,13 @@ public class Controller {
         return rc.carregarTodosCompra(path, usuarioLogado.getId());
     }
 
-    public List<Evento> filtrarPreco(List<Evento> eventos, int ordem) {
-        eventos.sort(Comparator.comparing(evento -> evento.getPreco() * ordem));
-        return eventos;
-    }
-    public List<Evento> filtrarTexto(List<Evento> eventos, String texto) {
-        return eventos.stream().filter(evento -> evento.getNome().toLowerCase().contains(texto.toLowerCase())).collect(Collectors.toList());
-    }
-//    public List<Evento> filtrarCategoria(List<Evento> eventos, Categoria categoria) {
-//        return eventos.stream().filter(evento -> evento.getCategoria().equals(categoria));
-//    }
-    public List<Evento> filtrarData(List<Evento> eventos) {
-        eventos.sort(Comparator.comparing(Evento::getData));
-        return eventos;
-    }
+  public Evento carregarEvento(String id){
+      try{
+          return re.carregarEvento(path, id);
+      } catch (IOException e) {
+          throw new RuntimeException(e);
+      }
+  }
+
 
 }

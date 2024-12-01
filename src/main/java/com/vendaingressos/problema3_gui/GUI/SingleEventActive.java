@@ -27,6 +27,7 @@ public class SingleEventActive extends SingleEvent implements GUI {
     @Override
     public void setLanguage() {
         super.setLanguage();
+        descricao.setText(evento.getDescricao()+"\n"+ControllerGUI.get("ToggleButton.preco")+": "+evento.getPreco()+"R$");
         comprar.setText(ControllerGUI.get("Button.comprar"));
 
     }

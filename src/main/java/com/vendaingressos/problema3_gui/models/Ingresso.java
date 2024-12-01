@@ -22,7 +22,7 @@ import java.util.UUID;
 public class Ingresso implements ComId {
     // atributos
     private Double preco;
-    private Boolean status;
+    private String status;
     private String evento;
     private final UUID id;
     
@@ -30,7 +30,7 @@ public class Ingresso implements ComId {
     public Ingresso(Evento evento, Double preco) {
         this.evento = evento.getId();
         this.preco = preco;
-        this.status = true;
+        this.status = "ativo";
         this.id = UUID.randomUUID();
     }
 
@@ -38,7 +38,7 @@ public class Ingresso implements ComId {
     public Ingresso(Evento evento) {
         this.evento = evento.getId();
         this.preco = evento.getPreco();
-        this.status = true;
+        this.status = "ativo";
         this.id = UUID.randomUUID();
     }
 
@@ -58,11 +58,11 @@ public class Ingresso implements ComId {
         this.preco = preco;
     }
 
-    public Boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -79,7 +79,14 @@ public class Ingresso implements ComId {
      * @return o Status do Ingresso
      */
     public boolean isAtivo(){
-        return getStatus();
+        return getStatus().equals("ativo");
+    }
+
+    /**
+     * @return o Status do Ingresso invertido
+     */
+    public boolean isInativo(){
+        return getStatus().equals("inativo");
     }
 
 
@@ -91,7 +98,7 @@ public class Ingresso implements ComId {
      */
     public Boolean cancelar(Calendar dataAtual, Calendar dataEvento){
         if (dataAtual.before(dataEvento)) {
-            setStatus(false);
+            setStatus("cancelado");
             return true;
         }
         return false;

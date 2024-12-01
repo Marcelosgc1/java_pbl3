@@ -45,6 +45,7 @@
                      <children>
                         <Button fx:id="verEventos" layoutX="184.0" layoutY="163.0" mnemonicParsing="false" onAction="#verTodosEventos" />
                         <Button fx:id="verCompras" layoutX="184.0" layoutY="214.0" mnemonicParsing="false" onAction="#verTodasAsCompras" />
+                        <Button fx:id="verIngressos" layoutX="184.0" layoutY="266.0" mnemonicParsing="false" onAction="#verTodosIngressos" />
                      </children></AnchorPane>
           </content>
         </ScrollPane>

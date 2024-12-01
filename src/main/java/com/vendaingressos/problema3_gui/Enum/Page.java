@@ -13,9 +13,10 @@ public enum Page {
     COMPRAR(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "purchase.fxml", Purchase.class),
     TODAS_COMPRAS(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "allPurchases.fxml", AllPurchases.class),
     EVENTO_UNICO_DESATIVADO(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "singleEventInactive.fxml", SingleEventNotActive.class),
-
+    TODOS_INGRESSOS(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "allTickets.fxml", AllTickets.class)
 
     ;
+
     public final String path;
     public final Class<?> controllerClass;
 

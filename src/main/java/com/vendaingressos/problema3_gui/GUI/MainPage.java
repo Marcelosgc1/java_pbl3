@@ -22,6 +22,8 @@ public class MainPage implements GUI {
     @FXML
     private Button verCompras;
     @FXML
+    private Button verIngressos;
+    @FXML
     private TextField newName;
     @FXML
     private TextField newEmail;
@@ -51,6 +53,22 @@ public class MainPage implements GUI {
                 (Stage) verCompras.getScene().getWindow()
         );
     }
+    public void verTodosIngressos() throws Exception {
+        ControllerGUI.mudarPagina(
+                Page.TODOS_INGRESSOS,
+                (Stage) verIngressos.getScene().getWindow()
+        );
+    }
+
+
+
+
+
+
+
+
+
+
     public void confirmarMudancas() throws Exception {
         if(!newName.getText().isEmpty()) {
             String novoNome = newName.getText();

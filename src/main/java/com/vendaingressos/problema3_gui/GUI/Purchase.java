@@ -40,7 +40,7 @@ public class Purchase implements GUI {
     @Override
     public void setLanguage() {
         realizarCompra.setText(ControllerGUI.get("Button.confirmarCompra"));
-        sair.setText(ControllerGUI.get("Button.sair"));
+        sair.setText(ControllerGUI.get("Button.cancel"));
     }
 
     @FXML
@@ -60,7 +60,7 @@ public class Purchase implements GUI {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(ControllerGUI.get("Title.confirmacao"));
         alert.setHeaderText(ControllerGUI.get("Button.confirmarCompra"));
-        alert.setContentText(ControllerGUI.get("Text.compra1")+quantidade+ControllerGUI.get("Text.compra2")+ evento.getPreco()*quantidade+ControllerGUI.get("Text.compra3"));
+        alert.setContentText(ControllerGUI.get("Text.compra1")+quantidade+" "+ControllerGUI.get("Text.compra2")+ evento.getPreco()*quantidade+" reais?");
         Optional<ButtonType> result = alert.showAndWait();
         if (result.isPresent() && result.get() == ButtonType.OK) {
             controller.realizarCompra(usuarioLogado, evento, quantidade, Calendar.getInstance(), pagamento);
