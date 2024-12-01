@@ -1,16 +1,14 @@
 package com.vendaingressos.problema3_gui.GUI;
 
-import com.vendaingressos.problema3_gui.Enum.Page;
+
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
 import com.vendaingressos.problema3_gui.interfaces.GUI;
-import com.vendaingressos.problema3_gui.models.Evento;
 import com.vendaingressos.problema3_gui.models.Ingresso;
 import com.vendaingressos.problema3_gui.widget.ListIngressos;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
 import javafx.util.Callback;
 
 import java.io.IOException;
@@ -41,7 +39,8 @@ public class AllTickets implements GUI {
     public void initialize() {
         setLanguage();
         try {
-            ticketsFiltrado = controller.listarIngressosAtualizado(usuarioLogado, Calendar.getInstance());
+            updateList();
+            todosIngressosList.setItems(ticketsFiltrado.stream().collect(Collectors.toCollection(FXCollections::observableArrayList)));
             setToggleButtonIngressos(todosIngressosList);
             todosIngressosList.setCellFactory(new Callback<ListView<Ingresso>, ListCell<Ingresso>>() {
                 @Override
@@ -49,7 +48,7 @@ public class AllTickets implements GUI {
                     return new ListIngressos();
                 }
             });
-            todosIngressosList.setItems(ticketsFiltrado.stream().collect(Collectors.toCollection(FXCollections::observableArrayList)));
+
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -59,6 +58,10 @@ public class AllTickets implements GUI {
     }
 
 
+    private void updateList() throws IOException {
+        ticketsFiltrado = controller.listarIngressosAtualizado(usuarioLogado, Calendar.getInstance());
+
+    }
 
     private void setToggleButtonIngressos(ListView<Ingresso> todosIngressos) throws IOException {
         ToggleGroup toggleGroup = new ToggleGroup();
@@ -68,7 +71,11 @@ public class AllTickets implements GUI {
         toggleGroup.selectedToggleProperty().addListener((obs, oldToggle, newToggle) -> {
 
             ToggleButton selectedButton = (ToggleButton) newToggle;
-
+            try {
+                updateList();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             if (selectedButton == atual) {
                 passado.setSelected(false);
                 ObservableList<Ingresso> lista = ticketsFiltrado.stream().filter(Ingresso::isAtivo).collect(Collectors.toCollection(FXCollections::observableArrayList));
@@ -88,19 +95,22 @@ public class AllTickets implements GUI {
     }
 
     @FXML
-    private void detalhesIngresso(){
+    private void detalhesIngresso() {
         todosIngressosList.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
-                try {
-                    Ingresso ingressoSelecionado = todosIngressosList.getSelectionModel().getSelectedItem();
-                    Evento eventoSelecionado = controller.carregarEvento(ingressoSelecionado.getEvento());
-                    Page EVENTO_UNICO = eventoSelecionado.isAtivo(Calendar.getInstance()) ? Page.EVENTO_UNICO_ATIVO : Page.EVENTO_UNICO_DESATIVADO;
-                    ControllerGUI.mudarPagina(EVENTO_UNICO, (Stage) todosIngressosList.getScene().getWindow(), eventoSelecionado);
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
+                Ingresso selectedIngresso = todosIngressosList.getSelectionModel().getSelectedItem();
+                if (selectedIngresso != null) {
+                    String nomeDoEvento = controller.carregarEvento(selectedIngresso.getEvento()).getNome();
+
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle(ControllerGUI.get("Title.ticket"));
+                    alert.setHeaderText(ControllerGUI.get("Header.Ticket") + ": " + nomeDoEvento);
+                    alert.setContentText(ControllerGUI.get("Content.Ticket") + "\n"+selectedIngresso.getId());
+                    alert.showAndWait();
                 }
             }
         });
     }
+
 
 }

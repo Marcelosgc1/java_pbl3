@@ -13,6 +13,8 @@ import javafx.scene.control.SpinnerValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.util.Calendar;
+
 public class SingleEventActive extends SingleEvent implements GUI {
 
     @FXML
@@ -27,7 +29,10 @@ public class SingleEventActive extends SingleEvent implements GUI {
     @Override
     public void setLanguage() {
         super.setLanguage();
-        descricao.setText(evento.getDescricao()+"\n"+ControllerGUI.get("ToggleButton.preco")+": "+evento.getPreco()+"R$");
+        descricao.setText(evento.getDescricao()+"\n"+ControllerGUI.get("ToggleButton.preco")+": "+evento.getPreco()+"R$\n"+ControllerGUI.get("ToggleButton.data")+ " " +
+                evento.getData().get(Calendar.DAY_OF_MONTH) + "/" +
+                (evento.getData().get(Calendar.MONTH) + 1) + "/" +
+                evento.getData().get(Calendar.YEAR));
         comprar.setText(ControllerGUI.get("Button.comprar"));
 
     }

@@ -118,6 +118,7 @@ public class MainPage implements GUI {
         username.setText(ControllerGUI.get("label.username") + usuarioLogado.getNome());
         verEventos.setText(ControllerGUI.get("button.allEvents"));
         verCompras.setText(ControllerGUI.get("button.allPurchases"));
+        verIngressos.setText(ControllerGUI.get("button.allTickets"));
         change.setText(ControllerGUI.get("Label.change"));
         newName.setPromptText(ControllerGUI.get("textField.newName"));
         newEmail.setPromptText(ControllerGUI.get("textField.newEmail"));

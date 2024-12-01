@@ -26,7 +26,7 @@ public class ListIngressos extends ListCell<Ingresso> {
     HBox hbox = new HBox();
     Label label = new Label("(empty)");
     Pane pane = new Pane();
-    Button detalhes = new Button("(>)");
+    Button detalhes = new Button(ControllerGUI.get("Button.detail"));
     Button cancelar = new Button(ControllerGUI.get("Button.cancel"));
     Evento evento;
     Ingresso ingresso;
