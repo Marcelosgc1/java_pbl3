@@ -128,7 +128,6 @@ public class MainPage implements GUI {
         data.setText(
                 ControllerGUI.get("textField.login") + ": " + usuarioLogado.getLogin() + "\n" +
                 ControllerGUI.get("textField.email") + ": " + usuarioLogado.getEmail() + "\n" +
-                ControllerGUI.get("textField.nome") + ": " + usuarioLogado.getNome() + "\n" +
                 ControllerGUI.get("textField.cpf") + ": " + usuarioLogado.getCpf()
         );
     }

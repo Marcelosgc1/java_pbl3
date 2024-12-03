@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.util.Callback;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -60,7 +61,9 @@ public class AllTickets implements GUI {
 
     private void updateList() throws IOException {
         ticketsFiltrado = controller.listarIngressosAtualizado(usuarioLogado, Calendar.getInstance());
-
+        if (ticketsFiltrado == null) {
+            ticketsFiltrado = new ArrayList<>();
+        }
     }
 
     private void setToggleButtonIngressos(ListView<Ingresso> todosIngressos) throws IOException {

@@ -38,8 +38,10 @@ public class ListIngressos extends ListCell<Ingresso> {
         cancelar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+
                 try {
                     controller.cancelarCompra(usuarioLogado,ingresso,Calendar.getInstance());
+                    ControllerGUI.pageStack.peek().getController().initialize();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }

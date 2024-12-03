@@ -207,6 +207,9 @@ public class Controller {
      */
     public List<Ingresso> listarIngressosAtualizado(Usuario usuario, Calendar dataAtual) throws IOException {
         List<Ingresso> ingressos = listarIngressosComprados(usuario);
+        if (ingressos == null) {
+            return null;
+        }
         return ingressos.stream()
                 .filter(ingresso -> !ingresso.getStatus().equals("cancelado"))
                 .map(ingresso -> updateIngresso(ingresso, dataAtual, usuario.getId()))
