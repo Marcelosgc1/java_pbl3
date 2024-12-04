@@ -3,11 +3,17 @@ package com.vendaingressos.problema3_gui.GUI;
 import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
 import com.vendaingressos.problema3_gui.interfaces.GUI;
+import com.vendaingressos.problema3_gui.models.Notificacao;
+import com.vendaingressos.problema3_gui.widget.ListNotifications;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
+import java.util.Calendar;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static com.vendaingressos.problema3_gui.Main.controller;
 import static com.vendaingressos.problema3_gui.controllers.ControllerGUI.usuarioLogado;
@@ -35,10 +41,25 @@ public class MainPage implements GUI {
     private Button confirmChange;
     @FXML
     private Label data;
+    @FXML
+    private ListView<Notificacao> notifications;
+
 
     @FXML
     public void initialize() {
         setLanguage();
+        try{
+            controller.listarIngressosAtualizado(usuarioLogado, Calendar.getInstance());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        notifications.setItems(ControllerGUI.notificacoes.stream().collect(Collectors.toCollection(FXCollections::observableArrayList)));
+        notifications.setCellFactory(new Callback<ListView<Notificacao>, ListCell<Notificacao>>() {
+            @Override
+            public ListCell<Notificacao> call(ListView<Notificacao> param) {
+                return new ListNotifications();
+            }
+        });
     }
 
     public void verTodosEventos() throws Exception {

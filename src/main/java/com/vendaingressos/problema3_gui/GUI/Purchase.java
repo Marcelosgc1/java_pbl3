@@ -1,6 +1,7 @@
 package com.vendaingressos.problema3_gui.GUI;
 
 import com.vendaingressos.problema3_gui.Enum.FormaDePagamento;
+import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
 import com.vendaingressos.problema3_gui.interfaces.GUI;
 import com.vendaingressos.problema3_gui.models.Evento;
@@ -69,6 +70,9 @@ public class Purchase implements GUI {
             alert.setTitle(ControllerGUI.get("Title.confirmacao"));
             alert.setHeaderText(ControllerGUI.get("Header.confirmada"));
             alert.showAndWait();
+
+            ControllerGUI.adicionarNotificacao(null, Page.TODAS_COMPRAS);
+
         }
         cancelar();
     }

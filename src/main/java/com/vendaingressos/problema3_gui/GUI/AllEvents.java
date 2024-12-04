@@ -45,7 +45,7 @@ public class AllEvents implements GUI {
 
     public AllEvents() throws IOException {
 //        eventos = controller.listarEventosDisponiveis(Calendar.getInstance());
-        eventos = controller.listarEventos();
+        eventos = controller.listarEventos(Calendar.getInstance());
         eventosFiltrados = FXCollections.observableArrayList(eventos);
     }
 

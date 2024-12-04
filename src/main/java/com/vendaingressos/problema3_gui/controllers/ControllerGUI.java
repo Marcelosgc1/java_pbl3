@@ -2,13 +2,13 @@ package com.vendaingressos.problema3_gui.controllers;
 
 import com.vendaingressos.problema3_gui.Enum.Idiomas;
 import com.vendaingressos.problema3_gui.Enum.Page;
+import com.vendaingressos.problema3_gui.interfaces.ComId;
+import com.vendaingressos.problema3_gui.models.Notificacao;
 import com.vendaingressos.problema3_gui.models.Pagina;
 import com.vendaingressos.problema3_gui.models.Usuario;
 import javafx.stage.Stage;
 
-import java.util.Locale;
-import java.util.ResourceBundle;
-import java.util.Stack;
+import java.util.*;
 
 public class ControllerGUI {
 
@@ -16,6 +16,7 @@ public class ControllerGUI {
     public static Stack<Pagina> pageStack = new Stack<>();
     private static ResourceBundle bundle;
     public static Idiomas idioma = Idiomas.PTBR;
+    public static List<Notificacao> notificacoes = new ArrayList<>();
 
     static {
         setLanguage(idioma);
@@ -48,5 +49,11 @@ public class ControllerGUI {
         }
         pagina.mudarDePagina(stage, obj);
     }
+
+    public static void adicionarNotificacao(ComId model, Page page) {
+        Notificacao n = new Notificacao(model, page);
+        notificacoes.add(n);
+    }
+
 
 }

@@ -89,7 +89,7 @@ public class Compra implements ComId {
         if (valorTotal>=0){
             return  "Para: " + email +
                     "\nAgradecemos pela sua compra!" +
-                    "\nData da compra: " + data +
+                    "\nData da compra: " + data.get(Calendar.DAY_OF_MONTH) + "/" + (data.get(Calendar.MONTH) + 1) + "/" + data.get(Calendar.YEAR) +
                     "\nForam comprados " + idsIngressos.size() +
                     " ingressos pelo usuario: " + usuario +
                     "\nValor total: " + valorTotal +
@@ -97,7 +97,7 @@ public class Compra implements ComId {
         }
         return  "Para: " + email +
                 "\nCancelamento efetuado com sucesso!" +
-                "\nData do cancelamento: " + data.toString() +
+                "\nData do cancelamento: " + data.get(Calendar.DAY_OF_MONTH) + "/" + (data.get(Calendar.MONTH) + 1) + "/" + data.get(Calendar.YEAR) +
                 "\nO ingresso " + idsIngressos.getFirst() +
                 " foi cencelado pelo usuario: " + usuario +
                 "\nValor devolvido: " + (valorTotal * -1);

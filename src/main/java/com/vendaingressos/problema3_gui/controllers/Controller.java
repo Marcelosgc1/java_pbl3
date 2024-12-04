@@ -12,6 +12,7 @@
 package com.vendaingressos.problema3_gui.controllers;
 
 import com.vendaingressos.problema3_gui.Enum.FormaDePagamento;
+import com.vendaingressos.problema3_gui.Enum.Page;
 import com.vendaingressos.problema3_gui.exceptions.*;
 import com.vendaingressos.problema3_gui.models.Compra;
 import com.vendaingressos.problema3_gui.models.Evento;
@@ -218,7 +219,21 @@ public class Controller {
 
     private Ingresso updateIngresso(Ingresso ingresso, Calendar dataAtual, String login){
         try{
-            ingresso.setStatus(dataAtual.before(controller.carregarEvento(ingresso.getEvento()).getData()) ? "ativo" : "inativo");
+            Evento evento = controller.carregarEvento(ingresso.getEvento());
+            Calendar clone = (Calendar) evento.getData().clone();
+            if(!dataAtual.before(clone) && ingresso.getStatus().equals("ativo")){
+                ingresso.setStatus("inativo");
+                //rola notificação ingresso
+                ControllerGUI.adicionarNotificacao(evento, Page.EVENTO_UNICO_DESATIVADO);
+
+                ri.salvarIngresso(path, ingresso, login);
+                return ingresso;
+            }
+            clone.add(Calendar.DAY_OF_YEAR, 7);
+            if (!dataAtual.before(clone)){
+                //rola notificação do evento
+                ControllerGUI.adicionarNotificacao(ingresso, Page.TODOS_INGRESSOS);
+            }
             ri.salvarIngresso(path, ingresso, login);
         }catch (Exception e){
             e.printStackTrace();
@@ -239,8 +254,18 @@ public class Controller {
     /**
      * @return Lista de todos os eventos
      */
-    public List<Evento> listarEventos() throws IOException {
-        return re.carregarTodosEventos(path);
+    public List<Evento> listarEventos(Calendar dia) throws IOException {
+        List<Evento> eventos = re.carregarTodosEventos(path);
+        eventos.forEach(evento -> {
+            try {
+                evento.isAtivo(dia);
+                re.salvarEvento(path, evento);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+        return eventos;
     }
 
     /**
