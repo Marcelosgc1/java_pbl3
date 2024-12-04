@@ -11,7 +11,6 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
-import java.util.Calendar;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -47,9 +46,10 @@ public class MainPage implements GUI {
 
     @FXML
     public void initialize() {
+
         setLanguage();
         try{
-            controller.listarIngressosAtualizado(usuarioLogado, Calendar.getInstance());
+            controller.listarIngressosAtualizado(usuarioLogado, ControllerGUI.calendar);
         }catch (Exception e){
             e.printStackTrace();
         }

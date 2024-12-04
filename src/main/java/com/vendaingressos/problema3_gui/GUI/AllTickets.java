@@ -60,7 +60,7 @@ public class AllTickets implements GUI {
 
 
     private void updateList() throws IOException {
-        ticketsFiltrado = controller.listarIngressosAtualizado(usuarioLogado, Calendar.getInstance());
+        ticketsFiltrado = controller.listarIngressosAtualizado(usuarioLogado, ControllerGUI.calendar);
         if (ticketsFiltrado == null) {
             ticketsFiltrado = new ArrayList<>();
         }
@@ -103,16 +103,20 @@ public class AllTickets implements GUI {
             if (event.getClickCount() == 2) {
                 Ingresso selectedIngresso = todosIngressosList.getSelectionModel().getSelectedItem();
                 if (selectedIngresso != null) {
-                    String nomeDoEvento = controller.carregarEvento(selectedIngresso.getEvento()).getNome();
-
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setTitle(ControllerGUI.get("Title.ticket"));
-                    alert.setHeaderText(ControllerGUI.get("Header.Ticket") + ": " + nomeDoEvento);
-                    alert.setContentText(ControllerGUI.get("Content.Ticket") + "\n"+selectedIngresso.getId());
-                    alert.showAndWait();
+                    alertaIngresso(selectedIngresso);
                 }
             }
         });
+    }
+
+    public static void alertaIngresso(Ingresso ingresso){
+        String nomeDoEvento = controller.carregarEvento(ingresso.getEvento()).getNome();
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(ControllerGUI.get("Title.ticket"));
+        alert.setHeaderText(ControllerGUI.get("Header.Ticket") + ": " + nomeDoEvento);
+        alert.setContentText(ControllerGUI.get("Content.Ticket") + "\n"+ingresso.getId());
+        alert.showAndWait();
     }
 
 

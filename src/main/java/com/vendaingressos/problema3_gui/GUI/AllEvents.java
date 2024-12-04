@@ -44,8 +44,7 @@ public class AllEvents implements GUI {
     private final List<Evento> eventos;
 
     public AllEvents() throws IOException {
-//        eventos = controller.listarEventosDisponiveis(Calendar.getInstance());
-        eventos = controller.listarEventos(Calendar.getInstance());
+        eventos = controller.listarEventos(ControllerGUI.calendar);
         eventosFiltrados = FXCollections.observableArrayList(eventos);
     }
 
@@ -104,7 +103,7 @@ public class AllEvents implements GUI {
         setPropriedadeCalendar(maior);
 
         pesquisa.textProperty().addListener((_, _, novoTexto) -> {
-            filtro(novoTexto, pegarDia(menor), pegarDia(maior));
+            filtro(novoTexto, ControllerGUI.DatePickerToCalendar(menor), ControllerGUI.DatePickerToCalendar(maior));
         });
 
     }
@@ -115,7 +114,7 @@ public class AllEvents implements GUI {
             public void changed(ObservableValue<? extends LocalDate> observable,
                                 java.time.LocalDate oldValue,
                                 java.time.LocalDate newValue) {
-                filtro(pesquisa.getText(), pegarDia(menor), pegarDia(maior));
+                filtro(pesquisa.getText(), ControllerGUI.DatePickerToCalendar(menor), ControllerGUI.DatePickerToCalendar(maior));
             }
         });
     }
@@ -133,7 +132,7 @@ public class AllEvents implements GUI {
             if (event.getClickCount() == 2) {
                 try {
                     Evento eventoSelecionado = todosEventos.getSelectionModel().getSelectedItem();
-                    Page EVENTO_UNICO = eventoSelecionado.isAtivo(Calendar.getInstance()) ? Page.EVENTO_UNICO_ATIVO : Page.EVENTO_UNICO_DESATIVADO;
+                    Page EVENTO_UNICO = eventoSelecionado.isAtivo(ControllerGUI.calendar) ? Page.EVENTO_UNICO_ATIVO : Page.EVENTO_UNICO_DESATIVADO;
                     ControllerGUI.mudarPagina(EVENTO_UNICO, (Stage) todosEventos.getScene().getWindow(), eventoSelecionado);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
@@ -149,20 +148,6 @@ public class AllEvents implements GUI {
                 .filter(evento -> (dataFinal == null || evento.getData().before(dataFinal)))
                 .collect(Collectors.toCollection(FXCollections::observableArrayList));
         todosEventos.setItems(eventosFiltrados);
-    }
-
-    private Calendar pegarDia(DatePicker dia){
-        LocalDate data1 = dia.getValue();
-        if (data1 == null) {
-            return null;
-        }
-
-        ZoneId zone = ZoneId.systemDefault();
-
-        Calendar dia1 = Calendar.getInstance();
-        dia1.setTime(Date.from(data1.atStartOfDay(zone).toInstant()));
-        return dia1;
-
     }
 
     @Override

@@ -20,7 +20,7 @@ public class Notificacao {
     @Override
     public String toString() {
         switch (page) {
-            case EVENTO_UNICO_ATIVO -> {
+            case TODOS_INGRESSOS -> {
                 return "Evento está aproximando!";
             }
             case EVENTO_UNICO_DESATIVADO -> {

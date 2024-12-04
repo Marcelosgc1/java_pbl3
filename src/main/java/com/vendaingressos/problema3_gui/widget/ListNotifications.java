@@ -2,8 +2,8 @@ package com.vendaingressos.problema3_gui.widget;
 
 
 import com.vendaingressos.problema3_gui.Enum.Page;
+import com.vendaingressos.problema3_gui.GUI.AllTickets;
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
-import com.vendaingressos.problema3_gui.models.Evento;
 import com.vendaingressos.problema3_gui.models.Ingresso;
 import com.vendaingressos.problema3_gui.models.Notificacao;
 import javafx.event.ActionEvent;
@@ -16,8 +16,6 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-import java.util.Calendar;
 
 import static com.vendaingressos.problema3_gui.Main.controller;
 import static com.vendaingressos.problema3_gui.controllers.ControllerGUI.usuarioLogado;
@@ -37,7 +35,11 @@ public class ListNotifications extends ListCell<Notificacao> {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    ControllerGUI.mudarPagina(notificacao.page, (Stage) detalhes.getScene().getWindow());
+                    if(notificacao.page.equals(Page.EVENTO_UNICO_DESATIVADO)) ControllerGUI.mudarPagina(notificacao.page, (Stage) detalhes.getScene().getWindow(), notificacao.modelo);
+                    else ControllerGUI.mudarPagina(notificacao.page, (Stage) detalhes.getScene().getWindow());
+                    if(notificacao.page.equals(Page.TODOS_INGRESSOS)){
+                        AllTickets.alertaIngresso((Ingresso) notificacao.modelo);
+                    }
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }

@@ -221,17 +221,16 @@ public class Controller {
         try{
             Evento evento = controller.carregarEvento(ingresso.getEvento());
             Calendar clone = (Calendar) evento.getData().clone();
-            if(!dataAtual.before(clone) && ingresso.getStatus().equals("ativo")){
+            if(!dataAtual.before(clone) && (ingresso.getStatus().equals("ativo") || ingresso.getStatus().equals("notificado"))){
                 ingresso.setStatus("inativo");
-                //rola notificação ingresso
                 ControllerGUI.adicionarNotificacao(evento, Page.EVENTO_UNICO_DESATIVADO);
 
                 ri.salvarIngresso(path, ingresso, login);
                 return ingresso;
             }
-            clone.add(Calendar.DAY_OF_YEAR, 7);
-            if (!dataAtual.before(clone)){
-                //rola notificação do evento
+            clone.add(Calendar.DAY_OF_YEAR, -7);
+            if (!dataAtual.before(clone) && ingresso.getStatus().equals("ativo")) {
+                ingresso.setStatus("notificado");
                 ControllerGUI.adicionarNotificacao(ingresso, Page.TODOS_INGRESSOS);
             }
             ri.salvarIngresso(path, ingresso, login);

@@ -38,6 +38,7 @@ public class TopBar implements GUI {
                 Page.LOGIN,
                 (Stage) perfil.getScene().getWindow()
         );
+        ControllerGUI.notificacoes.clear();
     }
 
     public void irParaPerfil() throws Exception {
@@ -57,10 +58,10 @@ public class TopBar implements GUI {
         Pagina lastPage = ControllerGUI.pageStack.pop();
         if (lastPage != null) {
             ControllerGUI.mudarPagina(lastPage, (Stage) perfil.getScene().getWindow());
+            if(ControllerGUI.pageStack.peek().getPagina().equals(Page.PERFIL)){ControllerGUI.notificacoes.clear();}
             return;
         }
-        ControllerGUI.mudarPagina(Page.LOGIN, (Stage) perfil.getScene().getWindow());
-
+        voltarParaLogin();
 
     }
 

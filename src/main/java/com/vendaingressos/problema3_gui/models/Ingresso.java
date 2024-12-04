@@ -79,7 +79,7 @@ public class Ingresso implements ComId {
      * @return o Status do Ingresso
      */
     public boolean isAtivo(){
-        return getStatus().equals("ativo");
+        return getStatus().equals("ativo") || getStatus().equals("notificado");
     }
 
     /**

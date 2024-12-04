@@ -49,7 +49,7 @@ public class SingleEventNotActive extends SingleEvent implements GUI {
             return;
         }
         try {
-            controller.realizarComentario(usuarioLogado, evento, comentario, Calendar.getInstance());
+            controller.realizarComentario(usuarioLogado, evento, comentario, ControllerGUI.calendar);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.showAndWait();
             novocomet.clear();

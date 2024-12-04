@@ -40,7 +40,7 @@ public class ListIngressos extends ListCell<Ingresso> {
             public void handle(ActionEvent event) {
 
                 try {
-                    controller.cancelarCompra(usuarioLogado,ingresso,Calendar.getInstance());
+                    controller.cancelarCompra(usuarioLogado,ingresso,ControllerGUI.calendar);
                     ControllerGUI.pageStack.peek().getController().initialize();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
@@ -50,7 +50,7 @@ public class ListIngressos extends ListCell<Ingresso> {
         detalhes.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                Page EVENTO_UNICO = evento.isAtivo(Calendar.getInstance()) ? Page.EVENTO_UNICO_ATIVO : Page.EVENTO_UNICO_DESATIVADO;
+                Page EVENTO_UNICO = evento.isAtivo(ControllerGUI.calendar) ? Page.EVENTO_UNICO_ATIVO : Page.EVENTO_UNICO_DESATIVADO;
                 try {
                     ControllerGUI.mudarPagina(EVENTO_UNICO, (Stage) detalhes.getScene().getWindow(), evento);
                 } catch (Exception e) {

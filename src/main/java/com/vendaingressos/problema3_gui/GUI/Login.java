@@ -41,6 +41,8 @@ public class Login implements GUI {
     private Button cadastra;
     @FXML
     private Button loga;
+    @FXML
+    private DatePicker DEBUG;
 
 
     @Override
@@ -131,6 +133,12 @@ public class Login implements GUI {
                 Page.PERFIL,
                 (Stage) logSenha.getScene().getWindow()
         );
+    }
+
+    @FXML
+    public void setDataTeste() {
+        ControllerGUI.calendar = ControllerGUI.DatePickerToCalendar(DEBUG);
+        System.out.println(ControllerGUI.calendar);
     }
 
 

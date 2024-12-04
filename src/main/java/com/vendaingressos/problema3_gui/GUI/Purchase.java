@@ -64,7 +64,7 @@ public class Purchase implements GUI {
         alert.setContentText(ControllerGUI.get("Text.compra1")+quantidade+" "+ControllerGUI.get("Text.compra2")+ evento.getPreco()*quantidade+" reais?");
         Optional<ButtonType> result = alert.showAndWait();
         if (result.isPresent() && result.get() == ButtonType.OK) {
-            controller.realizarCompra(usuarioLogado, evento, quantidade, Calendar.getInstance(), pagamento);
+            controller.realizarCompra(usuarioLogado, evento, quantidade, ControllerGUI.calendar, pagamento);
             alert.close();
             alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle(ControllerGUI.get("Title.confirmacao"));
