@@ -5,6 +5,7 @@ public enum Idiomas {
 
     PTBR("Português BR", "pt"),
     EN("English", "en"),
+    ES("Español", "es"),
     ;
 
 

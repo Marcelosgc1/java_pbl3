@@ -26,7 +26,7 @@ public class Notificacao {
             case EVENTO_UNICO_DESATIVADO -> {
                 return "Evento finalizado!";
             }
-            default -> {return "Erro inesperado...";}
+            default -> {return "Compra realizada com sucesso!";}
         }
     }
 }
