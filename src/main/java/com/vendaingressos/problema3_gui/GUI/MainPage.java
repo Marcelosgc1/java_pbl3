@@ -43,6 +43,9 @@ public class MainPage implements GUI {
     @FXML
     private ListView<Notificacao> notifications;
 
+
+
+
     /**
      * Inicializa os widgets da página
      */

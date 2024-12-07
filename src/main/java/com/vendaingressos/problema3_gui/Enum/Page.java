@@ -11,14 +11,14 @@ public enum Page {
      * Primeiro campo se trata do local dos arquivos no projeto
      * Segundo campo se trata da classe relacionada à página
      */
-    LOGIN(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "loginScreen.fxml", Login.class),
-    PERFIL(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "mainScreen.fxml", MainPage.class),
-    TODOS_EVENTOS(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "allEvents.fxml", AllEvents.class),
-    EVENTO_UNICO_ATIVO(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "singleEvent.fxml", SingleEventActive.class),
-    COMPRAR(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "purchase.fxml", Purchase.class),
-    TODAS_COMPRAS(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "allPurchases.fxml", AllPurchases.class),
-    EVENTO_UNICO_DESATIVADO(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "singleEventInactive.fxml", SingleEventNotActive.class),
-    TODOS_INGRESSOS(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "allTickets.fxml", AllTickets.class)
+    LOGIN("loginScreen.fxml", Login.class),
+    PERFIL("mainScreen.fxml", MainPage.class),
+    TODOS_EVENTOS("allEvents.fxml", AllEvents.class),
+    EVENTO_UNICO_ATIVO("singleEvent.fxml", SingleEventActive.class),
+    COMPRAR("purchase.fxml", Purchase.class),
+    TODAS_COMPRAS("allPurchases.fxml", AllPurchases.class),
+    EVENTO_UNICO_DESATIVADO("singleEventInactive.fxml", SingleEventNotActive.class),
+    TODOS_INGRESSOS("allTickets.fxml", AllTickets.class)
 
     ;
 

@@ -14,6 +14,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Calendar;
@@ -118,6 +119,13 @@ public class Main extends Application {
 
         pagina.setController(loader.getController());
         ControllerGUI.pageStack.push(pagina);
+
+        if (loader.getLocation() == null) {
+            System.err.println("Location não definida. Caminho: " + Page.LOGIN.path);
+        } else {
+            System.out.println("FXML carregado corretamente: " + loader.getLocation());
+        }
+
         VBox root = loader.load();
         Scene scene = new Scene(root, 900, 600);
         primaryStage.setTitle("Sistema de Venda de Ingressos");

@@ -1,6 +1,7 @@
 package com.vendaingressos.problema3_gui.models;
 
 import com.vendaingressos.problema3_gui.Enum.Page;
+import com.vendaingressos.problema3_gui.Main;
 import com.vendaingressos.problema3_gui.controllers.ControllerGUI;
 import com.vendaingressos.problema3_gui.interfaces.GUI;
 import javafx.fxml.FXMLLoader;
@@ -33,8 +34,7 @@ public class Pagina {
      * @param objeto Array de objetos utilizado para inicializar o controller da página que será acessada
      */
     public void mudarDePagina(Stage stage, Object[] objeto) throws Exception{
-        FXMLLoader loader = new FXMLLoader(ControllerGUI.class.getResource(pagina.path));
-
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource(pagina.path));
         loader.setController(
                 this.pagina.controllerClass
                         .getDeclaredConstructors()[0]
@@ -51,7 +51,7 @@ public class Pagina {
      * @param stage Stage do sistema
      */
     public void mudarDePagina(Stage stage) throws Exception{
-        FXMLLoader loader = new FXMLLoader(ControllerGUI.class.getResource(pagina.path));
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource(pagina.path));
         loader.setController(
                 this.controller
         );
