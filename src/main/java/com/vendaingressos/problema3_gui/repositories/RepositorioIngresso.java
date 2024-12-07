@@ -14,6 +14,7 @@ package com.vendaingressos.problema3_gui.repositories;
 import com.vendaingressos.problema3_gui.models.Ingresso;
 import com.vendaingressos.problema3_gui.abstracts.Repositorio;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class RepositorioIngresso extends Repositorio<Ingresso> {
      * @throws IOException caso haja problema na hora de acessar as pastas
      */
     public Boolean salvarIngresso(String path, Ingresso obj, String login) throws IOException {
-        return super.salvar(path + "\\" + login, obj);
+        return super.salvar(path + File.separator + "Usuarios" + File.separator + login, obj);
     }
 
     /**
@@ -43,7 +44,7 @@ public class RepositorioIngresso extends Repositorio<Ingresso> {
      * @throws IOException caso haja problema na hora de acessar as pastas
      */
     public Ingresso carregarIngresso(String path, String id, String login) throws IOException {
-        return super.carregar(path + "\\" + login, id);
+        return super.carregar(path + File.separator + "Usuarios" + File.separator + login, id);
     }
 
     /**
@@ -54,6 +55,6 @@ public class RepositorioIngresso extends Repositorio<Ingresso> {
      * @throws IOException caso haja problema na hora de acessar as pastas
      */
     public List<Ingresso> carregarTodosIngressos(String path, String login) throws IOException{
-        return super.carregarTodosObjetos(path + "\\" + login);
+        return super.carregarTodosObjetos(path + File.separator + "Usuarios" + File.separator + login);
     }
 }

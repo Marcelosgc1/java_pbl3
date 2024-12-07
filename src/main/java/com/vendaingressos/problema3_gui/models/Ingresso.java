@@ -13,6 +13,8 @@ package com.vendaingressos.problema3_gui.models;
 
 import com.vendaingressos.problema3_gui.interfaces.ComId;
 
+import java.net.CacheRequest;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -20,7 +22,7 @@ import java.util.UUID;
 public class Ingresso implements ComId {
     // atributos
     private Double preco;
-    private Boolean status;
+    private String status;
     private String evento;
     private final UUID id;
     
@@ -28,7 +30,7 @@ public class Ingresso implements ComId {
     public Ingresso(Evento evento, Double preco) {
         this.evento = evento.getId();
         this.preco = preco;
-        this.status = true;
+        this.status = "ativo";
         this.id = UUID.randomUUID();
     }
 
@@ -36,7 +38,7 @@ public class Ingresso implements ComId {
     public Ingresso(Evento evento) {
         this.evento = evento.getId();
         this.preco = evento.getPreco();
-        this.status = true;
+        this.status = "ativo";
         this.id = UUID.randomUUID();
     }
 
@@ -56,11 +58,11 @@ public class Ingresso implements ComId {
         this.preco = preco;
     }
 
-    public Boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -77,7 +79,14 @@ public class Ingresso implements ComId {
      * @return o Status do Ingresso
      */
     public boolean isAtivo(){
-        return getStatus();
+        return getStatus().equals("ativo") || getStatus().equals("notificado");
+    }
+
+    /**
+     * @return o Status do Ingresso invertido
+     */
+    public boolean isInativo(){
+        return getStatus().equals("inativo");
     }
 
 
@@ -87,9 +96,9 @@ public class Ingresso implements ComId {
      * @param dataEvento data do evento
      * @return True se for bem sucedida a atualização e False se não.
      */
-    public Boolean cancelar(Date dataAtual, Date dataEvento){
+    public Boolean cancelar(Calendar dataAtual, Calendar dataEvento){
         if (dataAtual.before(dataEvento)) {
-            setStatus(false);
+            setStatus("cancelado");
             return true;
         }
         return false;

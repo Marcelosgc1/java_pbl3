@@ -14,6 +14,7 @@ package com.vendaingressos.problema3_gui.repositories;
 import com.vendaingressos.problema3_gui.abstracts.Repositorio;
 import com.vendaingressos.problema3_gui.models.Compra;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -32,7 +33,7 @@ public class RepositorioCompra extends Repositorio<Compra> {
      * @throws IOException caso haja problema na hora de acessar as pastas
      */
     public Boolean salvarCompra(String path, Compra obj, String login) throws IOException {
-        return super.salvar(path + "\\" + login, obj);
+        return super.salvar(path + File.separator + "Usuarios" + File.separator + login, obj);
     }
 
     /**
@@ -44,7 +45,7 @@ public class RepositorioCompra extends Repositorio<Compra> {
      * @throws IOException caso haja problema na hora de acessar as pastas
      */
     public Compra carregarCompra(String path, String id, String login) throws IOException {
-        return super.carregar(path + "\\" + login, id);
+        return super.carregar(path + File.separator + "Usuarios" + File.separator + login, id);
     }
 
     /**
@@ -55,6 +56,6 @@ public class RepositorioCompra extends Repositorio<Compra> {
      * @throws IOException caso haja problema na hora de acessar as pastas
      */
     public List<Compra> carregarTodosCompra(String path, String login) throws IOException{
-        return super.carregarTodosObjetos(path + "\\" + login);
+        return super.carregarTodosObjetos(path + File.separator + "Usuarios" + File.separator + login);
     }
 }

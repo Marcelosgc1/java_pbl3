@@ -1,0 +1,12 @@
+module:com.vendaingressos.problema3_gui
+unnamed package
+com.vendaingressos.problema3_gui
+com.vendaingressos.problema3_gui.abstracts
+com.vendaingressos.problema3_gui.controllers
+com.vendaingressos.problema3_gui.Enum
+com.vendaingressos.problema3_gui.exceptions
+com.vendaingressos.problema3_gui.GUI
+com.vendaingressos.problema3_gui.interfaces
+com.vendaingressos.problema3_gui.models
+com.vendaingressos.problema3_gui.repositories
+com.vendaingressos.problema3_gui.widget

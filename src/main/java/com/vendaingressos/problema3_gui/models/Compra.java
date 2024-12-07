@@ -17,17 +17,17 @@ import com.vendaingressos.problema3_gui.interfaces.ComId;
 import java.util.*;
 
 public class Compra implements ComId {
-    private String email;
-    private Date data;
-    private List<String> idsIngressos;
-    private String usuario;
-    private Double valorTotal;
-    private FormaDePagamento pagamento;
-    private UUID id;
+    private final String email;
+    private final Calendar data;
+    private final List<String> idsIngressos;
+    private final String usuario;
+    private final Double valorTotal;
+    private final FormaDePagamento pagamento;
+    private final UUID id;
 
 
 
-    public Compra(String email, Date data, String usuario, List<String> idsIngressos, Double valorTotal, FormaDePagamento pagamento) {
+    public Compra(String email, Calendar data, String usuario, List<String> idsIngressos, Double valorTotal, FormaDePagamento pagamento) {
         this.email = email;
         this.data = data;
         this.usuario = usuario;
@@ -37,7 +37,7 @@ public class Compra implements ComId {
         this.id = UUID.randomUUID();
     }
 
-    public Compra(String email, Date data, String usuario, List<String> idsIngressos, Double valorTotal) {
+    public Compra(String email, Calendar data, String usuario, List<String> idsIngressos, Double valorTotal) {
         this.email = email;
         this.data = data;
         this.usuario = usuario;
@@ -51,7 +51,7 @@ public class Compra implements ComId {
         return email;
     }
 
-    public Date getData() {
+    public Calendar getData() {
         return data;
     }
 
@@ -89,15 +89,15 @@ public class Compra implements ComId {
         if (valorTotal>=0){
             return  "Para: " + email +
                     "\nAgradecemos pela sua compra!" +
-                    "\nData da compra: " + data +
+                    "\nData da compra: " + data.get(Calendar.DAY_OF_MONTH) + "/" + (data.get(Calendar.MONTH) + 1) + "/" + data.get(Calendar.YEAR) +
                     "\nForam comprados " + idsIngressos.size() +
                     " ingressos pelo usuario: " + usuario +
                     "\nValor total: " + valorTotal +
-                    "\nformaDePagamento: " + pagamento;
+                    "\nForma de pagamento: " + pagamento;
         }
         return  "Para: " + email +
                 "\nCancelamento efetuado com sucesso!" +
-                "\nData do cancelamento: " + data.toString() +
+                "\nData do cancelamento: " + data.get(Calendar.DAY_OF_MONTH) + "/" + (data.get(Calendar.MONTH) + 1) + "/" + data.get(Calendar.YEAR) +
                 "\nO ingresso " + idsIngressos.getFirst() +
                 " foi cencelado pelo usuario: " + usuario +
                 "\nValor devolvido: " + (valorTotal * -1);

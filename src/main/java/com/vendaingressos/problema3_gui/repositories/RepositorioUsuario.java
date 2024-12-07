@@ -15,6 +15,7 @@ import com.google.gson.Gson;
 import com.vendaingressos.problema3_gui.models.Usuario;
 import com.vendaingressos.problema3_gui.abstracts.Repositorio;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -42,7 +43,7 @@ public class RepositorioUsuario extends Repositorio<Usuario> {
      */
     @Override
     public String gerarCaminho(String path, String id){
-        return path + "\\" + id + "\\" + classe.getSimpleName() + ".json";
+        return path + File.separator + id + File.separator + classe.getSimpleName() + ".json";
     }
 
     /**
@@ -53,7 +54,7 @@ public class RepositorioUsuario extends Repositorio<Usuario> {
      */
     @Override
     public String gerarCaminhoPasta(String path, String id) {
-        return path + "\\" + id;
+        return path + File.separator + id;
     }
 
     /**
@@ -64,7 +65,7 @@ public class RepositorioUsuario extends Repositorio<Usuario> {
      * @throws IOException caso haja problema na hora de acessar as pastas
      */
     public Boolean salvarUsuario(String path, Usuario obj) throws IOException {
-        return super.salvar(path + "\\" + "Usuarios", obj);
+        return super.salvar(path + File.separator + "Usuarios", obj);
     }
 
     /**
@@ -75,7 +76,7 @@ public class RepositorioUsuario extends Repositorio<Usuario> {
      * @throws IOException caso haja problema na hora de acessar as pastas
      */
     public Usuario carregarUsuario(String path, String id) throws IOException {
-        return super.carregar(path + "\\" + "Usuarios", id);
+        return super.carregar(path + File.separator + "Usuarios", id);
     }
 
     /**
@@ -85,7 +86,7 @@ public class RepositorioUsuario extends Repositorio<Usuario> {
      * @throws IOException caso haja problema na hora de acessar as pastas
      */
     public List<Usuario> carregarTodosUsuarios(String path) throws IOException {
-        return carregarTodosObjetos(path + "\\Usuarios");
+        return carregarTodosObjetos(path + File.separator + "Usuarios");
     }
 
     /**
@@ -115,7 +116,7 @@ public class RepositorioUsuario extends Repositorio<Usuario> {
      * @param obj HashSet que será salvo
      */
     public void salvarSet(String path, HashSet<String> obj){
-        try (FileWriter writer = new FileWriter(path + "\\setUsuarios.json")) {
+        try (FileWriter writer = new FileWriter(path + File.separator + "setUsuarios.json")) {
             new Gson().toJson(obj, writer);
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -128,7 +129,7 @@ public class RepositorioUsuario extends Repositorio<Usuario> {
      * @return HashSet dos logins dos usuários
      */
     public HashSet<String> carregarSet(String path){
-        try (FileReader reader = new FileReader(path + "\\setUsuarios.json")){
+        try (FileReader reader = new FileReader(path + File.separator + "setUsuarios.json")){
             return new Gson().fromJson(reader, HashSet.class);
         } catch (IOException e){
             return null;

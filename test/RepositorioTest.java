@@ -22,6 +22,7 @@ import com.vendaingressos.problema3_gui.repositories.RepositorioUsuario;
 import org.junit.jupiter.api.Test;
 
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
@@ -42,33 +43,30 @@ public class RepositorioTest {
     private static String pastaUsuario;
     private static String pastaCompra;
     private static String pastaIngresso;
-    private static Date dataFuturo;
-    private static Date dataAtual;
-    private static Date dataPassado;
+    private static Calendar dataFuturo;
+    private static Calendar dataAtual;
+    private static Calendar dataPassado;
 
 
     @BeforeAll
     static void setUp() {
 
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(2025, Calendar.OCTOBER, 5);
-        dataFuturo = calendar.getTime();
+        dataFuturo = Calendar.getInstance();
+        dataFuturo.set(2025, Calendar.OCTOBER, 5);
 
-        calendar = Calendar.getInstance();
-        calendar.set(2024, Calendar.OCTOBER, 5);
-        dataAtual = calendar.getTime();
+        dataAtual = Calendar.getInstance();
+        dataAtual.set(2024, Calendar.OCTOBER, 5);
 
-        calendar = Calendar.getInstance();
-        calendar.set(2023, Calendar.OCTOBER, 5);
-        dataPassado = calendar.getTime();
+        dataPassado = Calendar.getInstance();
+        dataPassado.set(2023, Calendar.OCTOBER, 5);
 
         pathPrincipal = pathPrincipal + "repositoryTests";
 
         //Criando pastas auxiliares
-        pastaEventos = pathPrincipal + "/events";
-        pastaUsuario = pathPrincipal + "/user";
-        pastaCompra = pathPrincipal + "/purchases";
-        pastaIngresso = pathPrincipal + "/ticket";
+        pastaEventos = pathPrincipal + File.separator + "events";
+        pastaUsuario = pathPrincipal+ File.separator  + "user";
+        pastaCompra = pathPrincipal+ File.separator  + "purchases";
+        pastaIngresso = pathPrincipal+ File.separator  + "ticket";
 
 
     }
