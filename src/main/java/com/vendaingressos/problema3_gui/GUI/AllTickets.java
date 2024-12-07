@@ -29,13 +29,17 @@ public class AllTickets implements GUI {
     private ListView<Ingresso> todosIngressosList;
 
     private List<Ingresso> ticketsFiltrado;
-
+    /**
+     * Coloca a mensagem de texto na linguagem atual do sistema
+     */
     @Override
     public void setLanguage() {
         atual.setText(ControllerGUI.get("Toggle.atual"));
         passado.setText(ControllerGUI.get("Toggle.passado"));
     }
-
+    /**
+     * Inicializa os widgets da página
+     */
     @FXML
     public void initialize() {
         setLanguage();
@@ -58,7 +62,9 @@ public class AllTickets implements GUI {
 
     }
 
-
+    /**
+     * Atualiza a lista de ingressos
+     */
     private void updateList() throws IOException {
         ticketsFiltrado = controller.listarIngressosAtualizado(usuarioLogado, ControllerGUI.calendar);
         if (ticketsFiltrado == null) {
@@ -66,6 +72,10 @@ public class AllTickets implements GUI {
         }
     }
 
+    /**
+     * Põe a propriedade de ToggleButton para filtrar os ingressos entre ativos e inativos
+     * @param todosIngressos ListView dos ingressos
+     */
     private void setToggleButtonIngressos(ListView<Ingresso> todosIngressos) throws IOException {
         ToggleGroup toggleGroup = new ToggleGroup();
         atual.setToggleGroup(toggleGroup);
@@ -97,6 +107,9 @@ public class AllTickets implements GUI {
         });
     }
 
+    /**
+     * Dá detalhes do ingresso no caso de clique duplo, isso mostra seu ID
+     */
     @FXML
     private void detalhesIngresso() {
         todosIngressosList.setOnMouseClicked(event -> {
@@ -109,6 +122,10 @@ public class AllTickets implements GUI {
         });
     }
 
+    /**
+     * Alerta com detelhes do ingresso
+     * @param ingresso Ingresso que terá seus detalhes apresentados
+     */
     public static void alertaIngresso(Ingresso ingresso){
         String nomeDoEvento = controller.carregarEvento(ingresso.getEvento()).getNome();
 

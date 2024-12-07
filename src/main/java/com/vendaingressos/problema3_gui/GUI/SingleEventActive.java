@@ -26,6 +26,9 @@ public class SingleEventActive extends SingleEvent implements GUI {
         super(evento);
     }
 
+    /**
+     * Coloca a mensagem de texto na linguagem atual do sistema
+     */
     @Override
     public void setLanguage() {
         super.setLanguage();
@@ -37,6 +40,9 @@ public class SingleEventActive extends SingleEvent implements GUI {
 
     }
 
+    /**
+     * Inicializa os widgets da página
+     */
     @FXML
     public void initialize() {
         setLanguage();
@@ -45,6 +51,9 @@ public class SingleEventActive extends SingleEvent implements GUI {
         );
     }
 
+    /**
+     * Abre processo de compra de ingresso
+     */
     public void comprar() throws Exception {
         Integer ingressosQnt = qnt.getValue();
         qnt.decrement(evento.getAssentosDisponiveis());

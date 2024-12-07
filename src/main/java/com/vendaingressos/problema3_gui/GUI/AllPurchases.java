@@ -18,12 +18,17 @@ public class AllPurchases implements GUI {
 
     @FXML
     private ListView<Compra> todasCompras;
-
+    /**
+     * Coloca a mensagem de texto na linguagem atual do sistema
+     */
     @Override
     public void setLanguage() {
 
     }
 
+    /**
+     * Inicializa os widgets da página
+     */
     @FXML
     public void initialize() {
         setLanguage();

@@ -44,7 +44,9 @@ public class Login implements GUI {
     @FXML
     private DatePicker DEBUG;
 
-
+    /**
+     * Coloca a mensagem de texto na linguagem atual do sistema
+     */
     @Override
     public void setLanguage() {
         login.setPromptText(ControllerGUI.get("textField.login"));
@@ -62,12 +64,17 @@ public class Login implements GUI {
         message.setText(ControllerGUI.get("label.messageLogin"));
 
     }
-
+    /**
+     * Inicializa os widgets da página
+     */
     @Override
     public void initialize() {
         setLanguage();
     }
 
+    /**
+     * Cadastra usuário com base dos TextFields da página inicial
+     */
     @FXML
     public void cadastraUsuario(){
         try {
@@ -107,6 +114,9 @@ public class Login implements GUI {
         }
     }
 
+    /**
+     * Loga usuário no sistema, abrindo a página principal se for bem sucedido
+     */
     @FXML
     public void loginUsuario() {
         try {
@@ -127,6 +137,9 @@ public class Login implements GUI {
 
     }
 
+    /**
+     * Muda a página do sistema
+     */
     @FXML
     public void mudarTelaPrincipal() throws Exception {
         ControllerGUI.mudarPagina(
@@ -135,6 +148,9 @@ public class Login implements GUI {
         );
     }
 
+    /**
+     * Altera a data atual do sistema para razões de DEBUG
+     */
     @FXML
     public void setDataTeste() {
         ControllerGUI.calendar = ControllerGUI.DatePickerToCalendar(DEBUG);

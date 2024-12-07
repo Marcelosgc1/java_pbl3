@@ -13,10 +13,6 @@ public class Notificacao {
     }
 
 
-
-
-
-
     @Override
     public String toString() {
         switch (page) {

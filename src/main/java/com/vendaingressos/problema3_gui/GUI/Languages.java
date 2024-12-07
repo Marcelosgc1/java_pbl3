@@ -9,14 +9,18 @@ import javafx.scene.control.ComboBox;
 public class Languages {
     @FXML
     private ComboBox<Idiomas> language;
-
+    /**
+     * Inicializa os widgets da página
+     */
     @FXML
     public void initialize() {
         language.getItems().addAll(Idiomas.values());
         language.setValue(ControllerGUI.idioma);
     }
 
-
+    /**
+     * Coloca a mensagem de texto na linguagem atual do sistema
+     */
     @FXML
     private void setLanguage() {
         ControllerGUI.setLanguage(this.language.getValue());

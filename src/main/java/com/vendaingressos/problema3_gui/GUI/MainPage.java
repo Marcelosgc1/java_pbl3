@@ -43,7 +43,9 @@ public class MainPage implements GUI {
     @FXML
     private ListView<Notificacao> notifications;
 
-
+    /**
+     * Inicializa os widgets da página
+     */
     @FXML
     public void initialize() {
 
@@ -62,18 +64,29 @@ public class MainPage implements GUI {
         });
     }
 
+    /**
+     * Muda a página para a de todos os eventos
+     */
     public void verTodosEventos() throws Exception {
         ControllerGUI.mudarPagina(
             Page.TODOS_EVENTOS,
             (Stage) verEventos.getScene().getWindow()
         );
     }
+
+    /**
+     * Muda a página para a de todas as compras realizadas pelo usuário
+     */
     public void verTodasAsCompras() throws Exception {
         ControllerGUI.mudarPagina(
                 Page.TODAS_COMPRAS,
                 (Stage) verCompras.getScene().getWindow()
         );
     }
+
+    /**
+     * Muda a página para de todos os ingressos que o usuário tem
+     */
     public void verTodosIngressos() throws Exception {
         ControllerGUI.mudarPagina(
                 Page.TODOS_INGRESSOS,
@@ -82,14 +95,9 @@ public class MainPage implements GUI {
     }
 
 
-
-
-
-
-
-
-
-
+    /**
+     * Altera os pessoais do usuário.
+     */
     public void confirmarMudancas() throws Exception {
         if(!newName.getText().isEmpty()) {
             String novoNome = newName.getText();
@@ -133,7 +141,9 @@ public class MainPage implements GUI {
         }
         initialize();
     }
-
+    /**
+     * Coloca a mensagem de texto na linguagem atual do sistema
+     */
     @Override
     public void setLanguage(){
         username.setText(ControllerGUI.get("label.username") + usuarioLogado.getNome());

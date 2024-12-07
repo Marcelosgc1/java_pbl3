@@ -49,6 +49,9 @@ public class AllEvents implements GUI {
     }
 
 
+    /**
+     * Inicializa os widgets da página
+     */
     @FXML
     public void initialize() {
         setLanguage();
@@ -119,6 +122,11 @@ public class AllEvents implements GUI {
         });
     }
 
+    /**
+     * Formata o texto do evento para mostrar na lista de eventos
+     * @param evento Evento que terá seus dados formatados
+     * @return Texto formatado
+     */
     private String formatarTexto(Evento evento) {
         return evento.getNome() + " - " +
                 evento.getData().get(Calendar.DAY_OF_MONTH) + "/" +
@@ -126,6 +134,9 @@ public class AllEvents implements GUI {
                 evento.getData().get(Calendar.YEAR);
     }
 
+    /**
+     * Abre a página de detalhes do evento, no caso de duplo clique
+     */
     @FXML
     private void detalhesDoEvento(){
         todosEventos.setOnMouseClicked(event -> {
@@ -141,6 +152,12 @@ public class AllEvents implements GUI {
         });
     }
 
+    /**
+     * filtra os eventos da lista que será exibida
+     * @param texto Texto que deve estar contido no título
+     * @param dataInicial Filtra os eventos para depois desta data
+     * @param dataFinal Filtra os eventos para antes desta data
+     */
     private void filtro(String texto, Calendar dataInicial, Calendar dataFinal) {
         eventosFiltrados = eventos.stream()
                 .filter(evento -> (texto == null || evento.getNome().toLowerCase().contains(texto.toLowerCase())))
@@ -150,6 +167,9 @@ public class AllEvents implements GUI {
         todosEventos.setItems(eventosFiltrados);
     }
 
+    /**
+     * Coloca a mensagem de texto na linguagem atual do sistema
+     */
     @Override
     public void setLanguage() {
         pesquisa.setPromptText(ControllerGUI.get("textField.pesquisa"));

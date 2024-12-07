@@ -26,7 +26,9 @@ public abstract class SingleEvent implements GUI {
         this.evento = evento;
     }
 
-
+    /**
+     * Coloca a mensagem de texto na linguagem atual do sistema
+     */
     @Override
     public void setLanguage() {
         nome.setText(evento.getNome());
@@ -34,6 +36,9 @@ public abstract class SingleEvent implements GUI {
 
     }
 
+    /**
+     * inicializa a página
+     */
     @FXML
     public void initialize() {
         setLanguage();

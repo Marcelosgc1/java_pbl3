@@ -1,10 +1,10 @@
 module com.vendaingressos.problema3_gui {
     requires javafx.controls;
     requires javafx.fxml;
+    requires org.junit.jupiter.api;
 
     requires org.kordamp.bootstrapfx.core;
     requires com.google.gson;
-
 
     opens com.vendaingressos.problema3_gui to javafx.fxml;
     opens com.vendaingressos.problema3_gui.models to com.google.gson;

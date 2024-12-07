@@ -21,6 +21,9 @@ import java.util.Calendar;
 public class Main extends Application {
     public static Controller controller = new Controller();
 
+    /**
+     * Inicializa o sistema com eventos para razões de demonstração
+     */
     public static void initEventos() throws Exception {
         if (Files.exists(Paths.get("repository" + File.separator + "Evento"))) return;
         Usuario admin = controller.cadastrarUsuario("admin", "senha123", "Admin User", "00000000000", "admin@example.com", true);
@@ -28,7 +31,7 @@ public class Main extends Application {
             admin = controller.loginUsuario("admin", "senha123");
         }
         Calendar calendar = Calendar.getInstance();
-
+        calendar.set(2023, Calendar.SEPTEMBER, 12);
         Evento evento1 = controller.cadastrarEvento(admin, "Show de Rock", "Banda XYZ", (Calendar) calendar.clone(), 100, 100.0);
         calendar.set(2025, Calendar.SEPTEMBER, 12);
         Evento evento2 = controller.cadastrarEvento(admin, "Show de Pop", "Artista ABC", (Calendar) calendar.clone(), 150, 120.0);

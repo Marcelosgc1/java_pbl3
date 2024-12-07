@@ -18,7 +18,9 @@ public class TopBar implements GUI {
     @FXML
     private Button backButton;
 
-
+    /**
+     * Coloca a mensagem de texto na linguagem atual do sistema
+     */
     @Override
     public void setLanguage() {
         perfil.setText(ControllerGUI.usuarioLogado.getLogin());
@@ -26,12 +28,17 @@ public class TopBar implements GUI {
         logout.setText(ControllerGUI.get("MenuItem.logout"));
         backButton.setText(ControllerGUI.get("Button.voltar"));
     }
-
+    /**
+     * Coloca a mensagem de texto na linguagem atual do sistema
+     */
     @FXML
     public void initialize() {
         setLanguage();
     }
 
+    /**
+     * Volta para página de login
+     */
     public void voltarParaLogin() throws Exception {
         ControllerGUI.pageStack.clear();
         ControllerGUI.mudarPagina(
@@ -41,6 +48,9 @@ public class TopBar implements GUI {
         ControllerGUI.notificacoes.clear();
     }
 
+    /**
+     * Navega para a página de perfil do usuário
+     */
     public void irParaPerfil() throws Exception {
         if (ControllerGUI.pageStack.peek().getPagina().equals(Page.PERFIL)) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION, ControllerGUI.get("Error.jaEmPerfil"));
@@ -53,15 +63,21 @@ public class TopBar implements GUI {
         );
     }
 
+    /**
+     * Volta para a última página acessada
+     */
     public void voltar() throws Exception {
         ControllerGUI.pageStack.pop();
         Pagina lastPage = ControllerGUI.pageStack.pop();
-        if (lastPage != null) {
-            ControllerGUI.mudarPagina(lastPage, (Stage) perfil.getScene().getWindow());
-            if(ControllerGUI.pageStack.peek().getPagina().equals(Page.PERFIL)){ControllerGUI.notificacoes.clear();}
+        if (lastPage == null) {
+            voltarParaLogin();
             return;
         }
-        voltarParaLogin();
+
+        ControllerGUI.mudarPagina(lastPage, (Stage) perfil.getScene().getWindow());
+        if (ControllerGUI.pageStack.peek().getPagina().equals(Page.PERFIL)) {
+            ControllerGUI.notificacoes.clear();
+        }
 
     }
 

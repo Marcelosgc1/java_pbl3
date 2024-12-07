@@ -37,13 +37,17 @@ public class Purchase implements GUI {
         this.evento = evento;
         this.quantidade = quantidade;
     }
-
+    /**
+     * Coloca a mensagem de texto na linguagem atual do sistema
+     */
     @Override
     public void setLanguage() {
         realizarCompra.setText(ControllerGUI.get("Button.confirmarCompra"));
         sair.setText(ControllerGUI.get("Button.cancel"));
     }
-
+    /**
+     * Inicializa os widgets da página
+     */
     @FXML
     public void initialize() {
         setLanguage();
@@ -51,6 +55,9 @@ public class Purchase implements GUI {
         pagamentos.setItems(a);
     }
 
+    /**
+     * Realiza o processo de compra, caso o usuário confirme
+     */
     public void comprar() throws IOException {
         FormaDePagamento pagamento = pagamentos.getSelectionModel().getSelectedItem();
         if (pagamento == null) {
@@ -77,6 +84,9 @@ public class Purchase implements GUI {
         cancelar();
     }
 
+    /**
+     * Termina processo de compra
+     */
     public void cancelar() {
         ((Stage) sair.getScene().getWindow()).close();
     }

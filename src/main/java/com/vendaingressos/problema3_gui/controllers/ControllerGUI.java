@@ -30,15 +30,30 @@ public class ControllerGUI {
         setLanguage(idioma);
     }
 
+    /**
+     * Muda o idioma do sistema para o escolhido
+     * @param novoIdioma novo idioma que será usado
+     */
     public static void setLanguage(Idiomas novoIdioma) {
         idioma = novoIdioma;
         bundle = ResourceBundle.getBundle("com.vendaingressos.problema3_gui.i18n.messages", Locale.forLanguageTag(idioma.localizacao));
     }
 
+    /**
+     * Pega a string na linguagem atual do sistema, relacionada a uma chave
+     * @param key chave da string
+     * @return String com texto no idioma atual do sistema
+     */
     public static String get(String key) {
         return bundle.getString(key);
     }
 
+    /**
+     * Muda a página do sistema para outra nova
+     * Além disso, põe a nova página na Stack de páginas
+     * @param pagina Página nova que será aberta
+     * @param stage Stage do programa
+     */
     public static void mudarPagina(Pagina pagina, Stage stage) throws Exception {
         if (!pagina.getPagina().equals(Page.COMPRAR)){
             pageStack.push(pagina);
@@ -46,10 +61,21 @@ public class ControllerGUI {
         pagina.mudarDePagina(stage);
     }
 
+    /**
+     * Muda a página do sistema para outra nova
+     * @param page Página nova que será aberta (Enumerador)
+     * @param stage Stage do programa
+     */
     public static void mudarPagina(Page page, Stage stage) throws Exception {
        mudarPagina(page, stage,null);
     }
 
+    /**
+     * Muda a página do sistema para outra nova
+     * @param page Página nova que será aberta (Enumerador)
+     * @param stage Stage do programa
+     * @param obj Array de objetos, que será usado como construtor da página nova
+     */
     public static void mudarPagina(Page page, Stage stage, Object... obj) throws Exception {
         Pagina pagina = new Pagina(page);
         if (!pagina.getPagina().equals(Page.COMPRAR)){
@@ -58,11 +84,21 @@ public class ControllerGUI {
         pagina.mudarDePagina(stage, obj);
     }
 
+    /**
+     * Adiciona uma nova notificação à lista de notificações
+     * @param model Objeto que gerou a notificação (Ingresso, evento ou compra)
+     * @param page Página que será aberta ao clicar na notificação
+     */
     public static void adicionarNotificacao(ComId model, Page page) {
         Notificacao n = new Notificacao(model, page);
         notificacoes.add(n);
     }
 
+    /**
+     * Recebe um DatePicker (javaFX) e converte seu valor interno para o Calendar
+     * @param dia DatePicker que terá o sua data lida
+     * @return a Data, mas como objeto do tipo Calendar
+     */
     public static Calendar DatePickerToCalendar(DatePicker dia){
         LocalDate data1 = dia.getValue();
         if (data1 == null) {

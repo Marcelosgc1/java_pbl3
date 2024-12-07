@@ -41,6 +41,9 @@ public class SingleEventNotActive extends SingleEvent implements GUI {
         comentarios.setItems(lista);
     }
 
+    /**
+     * Realiza comentário sobre o evento
+     */
     public void comentar() throws IOException {
         String comentario = novocomet.getText();
         if (comentario.isEmpty()) {
@@ -70,7 +73,9 @@ public class SingleEventNotActive extends SingleEvent implements GUI {
             initialize();
         }
     }
-
+    /**
+     * Coloca a mensagem de texto na linguagem atual do sistema
+     */
     public void setLanguage() {
         super.setLanguage();
         novocomet.setPromptText(ControllerGUI.get("TextArea.comentario"));

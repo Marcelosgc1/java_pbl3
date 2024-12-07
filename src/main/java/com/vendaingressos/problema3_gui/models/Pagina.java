@@ -27,6 +27,11 @@ public class Pagina {
         this.controller = controller;
     }
 
+    /**
+     * Muda a página para a nova
+     * @param stage Stage do sistema
+     * @param objeto Array de objetos utilizado para inicializar o controller da página que será acessada
+     */
     public void mudarDePagina(Stage stage, Object[] objeto) throws Exception{
         FXMLLoader loader = new FXMLLoader(ControllerGUI.class.getResource(pagina.path));
 
@@ -41,6 +46,10 @@ public class Pagina {
         stage.show();
     }
 
+    /**
+     * Caso a página já exista na stack, esse método é chamado para ir à nova página
+     * @param stage Stage do sistema
+     */
     public void mudarDePagina(Stage stage) throws Exception{
         FXMLLoader loader = new FXMLLoader(ControllerGUI.class.getResource(pagina.path));
         loader.setController(

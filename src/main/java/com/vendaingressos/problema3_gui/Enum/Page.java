@@ -6,6 +6,11 @@ import java.io.File;
 
 public enum Page {
 
+    /**
+     * Enumerador das páginas do sistema
+     * Primeiro campo se trata do local dos arquivos no projeto
+     * Segundo campo se trata da classe relacionada à página
+     */
     LOGIN(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "loginScreen.fxml", Login.class),
     PERFIL(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "mainScreen.fxml", MainPage.class),
     TODOS_EVENTOS(File.separator + "com" + File.separator + "vendaingressos" + File.separator + "problema3_gui" + File.separator + "allEvents.fxml", AllEvents.class),
